@@ -384,8 +384,24 @@ console.log(introduction);</textarea
 
 			// ページ読み込み時の処理
 			document.addEventListener("DOMContentLoaded", function () {
-				updateProgress("week1", 5);
-				highlightCurrentPage();
+				// script.jsの関数が利用可能になるまで待機
+				if (
+					typeof updateProgress === "function" &&
+					typeof highlightCurrentPage === "function"
+				) {
+					updateProgress("week1", 5);
+					highlightCurrentPage();
+				} else {
+					// 関数が利用可能になるまで少し待つ
+					setTimeout(function () {
+						if (typeof updateProgress === "function") {
+							updateProgress("week1", 5);
+						}
+						if (typeof highlightCurrentPage === "function") {
+							highlightCurrentPage();
+						}
+					}, 100);
+				}
 			});
 		</script>
 	</body>
