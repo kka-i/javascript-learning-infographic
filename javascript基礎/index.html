@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript基礎学習 - 3週間完全マスター</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Yu Gothic', 'YuGothic', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .weeks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .week-card {
+            background: linear-gradient(145deg, #f8f9ff, #ffffff);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .week-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .week-number {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .week-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .week-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .week-topics {
+            list-style: none;
+        }
+        
+        .week-topics li {
+            background: #f0f2ff;
+            margin: 5px 0;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #5a6cf3;
+        }
+        
+        .progress-section {
+            background: linear-gradient(135deg, #f0f2ff, #ffffff);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .progress-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .progress-bar {
+            background: #e0e7ff;
+            height: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            height: 100%;
+            width: 0%;
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+        
+        .progress-text {
+            color: #666;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>JavaScript基礎学習</h1>
+            <p>3週間でマスターする実践的プログラミング</p>
+        </div>
+        
+        <div class="weeks-grid">
+            <a href="week1-javascript-basics.html" class="week-card">
+                <div class="week-number">1</div>
+                <div class="week-title">第1週目: JavaScript基礎</div>
+                <div class="week-description">プログラミングの基礎とJavaScriptの基本構文を学習</div>
+                <ul class="week-topics">
+                    <li>変数と定数</li>
+                    <li>データ型</li>
+                    <li>演算子</li>
+                    <li>条件分岐</li>
+                    <li>繰り返し処理</li>
+                </ul>
+            </a>
+            
+            <a href="week2-javascript-basics.html" class="week-card">
+                <div class="week-number">2</div>
+                <div class="week-title">第2週目: 関数とオブジェクト</div>
+                <div class="week-description">関数の使い方とオブジェクト指向プログラミングの基礎</div>
+                <ul class="week-topics">
+                    <li>関数の定義と呼び出し</li>
+                    <li>スコープ</li>
+                    <li>オブジェクト</li>
+                    <li>配列とメソッド</li>
+                    <li>DOM操作の基礎</li>
+                </ul>
+            </a>
+            
+            <a href="week3-javascript-basics.html" class="week-card">
+                <div class="week-number">3</div>
+                <div class="week-title">第3週目: 実践応用</div>
+                <div class="week-description">実際のWebアプリケーション開発に必要な技術</div>
+                <ul class="week-topics">
+                    <li>イベント処理</li>
+                    <li>非同期処理</li>
+                    <li>API連携</li>
+                    <li>エラーハンドリング</li>
+                    <li>実践プロジェクト</li>
+                </ul>
+            </a>
+        </div>
+        
+        <div class="progress-section">
+            <div class="progress-title">学習進捗</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">学習を開始してください</div>
+        </div>
+    </div>
+    
+    <script>
+        // 学習進捗の管理
+        function updateProgress() {
+            const completed = localStorage.getItem('completedWeeks') || 0;
+            const progress = (completed / 3) * 100;
+            
+            document.getElementById('progressFill').style.width = progress + '%';
+            
+            if (progress === 0) {
+                document.getElementById('progressText').textContent = '学習を開始してください';
+            } else if (progress < 100) {
+                document.getElementById('progressText').textContent = `進捗: ${Math.round(progress)}% (${completed}/3週完了)`;
+            } else {
+                document.getElementById('progressText').textContent = '🎉 全ての学習が完了しました！';
+            }
+        }
+        
+        // ページ読み込み時に進捗を更新
+        updateProgress();
+    </script>
+</body>
+</html>
