@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページ2：「こんにちは」を表示しよう | 第1週目 JavaScript超入門</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page">
+        <!-- ヘッダー -->
+        <header class="header">
+            <div class="header__container">
+                <div class="header__nav">
+                    <a href="../index.html" class="header__home">🏠 ホーム</a>
+                    <div class="header__breadcrumb">
+                        <a href="index.html" class="breadcrumb__item">第1週目</a>
+                        <span class="breadcrumb__separator">></span>
+                        <span class="breadcrumb__item breadcrumb__item--current">ページ2</span>
+                    </div>
+                </div>
+                <h1 class="header__title">
+                    <span class="header__icon">📘</span>
+                    ページ2：「こんにちは」を表示しよう
+                </h1>
+                <p class="header__subtitle">console.logで文字を表示する方法</p>
+            </div>
+        </header>
+
+        <!-- 進捗バー -->
+        <div class="progress-bar">
+            <div class="progress-bar__container">
+                <div class="progress-bar__track">
+                    <div class="progress-bar__fill progress-bar__fill--week1" style="width: 25%"></div>
+                </div>
+                <span class="progress-bar__text">進捗: 25% (2/8ページ)</span>
+            </div>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <main class="main">
+            <!-- 学習内容 -->
+            <section class="content">
+                <div class="content__container">
+                    <!-- 詳細解説 -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">🌟 詳細解説</h2>
+                        <div class="content-section__body">
+                            <p class="content-text">
+                                <code>console.log()</code>は、括弧の中に書いた内容をコンソールに表示する命令です。
+                                これはプログラムの動作を確認するときによく使われます。
+                            </p>
+
+                            <div class="info-box info-box--primary">
+                                <h3 class="info-box__title">📝 書き方のルール</h3>
+                                <ul class="info-box__list">
+                                    <li>文字列（テキスト）は必ず引用符で囲む</li>
+                                    <li>シングルクォート（'）またはダブルクォート（"）どちらでも OK</li>
+                                    <li>命令の最後にセミコロン（;）を付ける</li>
+                                </ul>
+                            </div>
+
+                            <div class="syntax-example">
+                                <h3 class="syntax-example__title">📋 基本的な書き方</h3>
+                                <div class="code-example">
+                                    <div class="code-example__header">
+                                        <span class="code-example__title">基本構文</span>
+                                    </div>
+                                    <pre class="code-example__code"><code>console.log("表示したい文字列");</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="visual-demo">
+                                <h3 class="visual-demo__title">🔍 引用符の使い分け</h3>
+                                <div class="quote-examples">
+                                    <div class="quote-example">
+                                        <div class="quote-example__code">
+                                            <code>console.log("こんにちは");</code>
+                                        </div>
+                                        <div class="quote-example__label">ダブルクォート</div>
+                                    </div>
+                                    <div class="quote-example">
+                                        <div class="quote-example__code">
+                                            <code>console.log('こんにちは');</code>
+                                        </div>
+                                        <div class="quote-example__label">シングルクォート</div>
+                                    </div>
+                                </div>
+                                <p class="quote-note">どちらも同じ結果になります！</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 課題 -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">💡 課題</h2>
+                        <div class="content-section__body">
+                            <div class="challenge-box">
+                                <p class="challenge-text">
+                                    好きなメッセージを <code>console.log</code> で表示してみよう
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 模範解答 -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">✅ 模範解答</h2>
+                        <div class="content-section__body">
+                            <div class="code-example">
+                                <div class="code-example__header">
+                                    <span class="code-example__title">JavaScript</span>
+                                    <button class="code-example__copy" onclick="copyCode(this)">📋 コピー</button>
+                                </div>
+                                <pre class="code-example__code"><code>console.log("こんにちは");
+console.log("今日は良い天気ですね！");
+console.log("私の名前はたろうです");</code></pre>
+                            </div>
+
+                            <div class="explanation-box">
+                                <h3 class="explanation-box__title">📝 解説</h3>
+                                <p class="explanation-text">
+                                    引用符で囲まれた部分がそのまま表示されます。日本語も英語も数字も表示できます。
+                                    複数の<code>console.log</code>を書くと、それぞれが別の行に表示されます。
+                                </p>
+                            </div>
+
+                            <!-- 実行可能なコンソール -->
+                            <div class="interactive-console">
+                                <h3 class="interactive-console__title">🖥️ 実際に試してみよう</h3>
+                                <div class="console-simulator">
+                                    <div class="console-simulator__header">
+                                        <span class="console-simulator__title">JavaScript Console</span>
+                                        <button class="console-clear" onclick="clearConsole()">🗑️ クリア</button>
+                                    </div>
+                                    <div class="console-simulator__body">
+                                        <div class="console-output" id="consoleOutput">
+                                            <div class="console-line">
+                                                <span class="console-prompt">&gt;</span>
+                                                <span class="console-text">console.log("好きなメッセージ"); を入力してみよう</span>
+                                            </div>
+                                        </div>
+                                        <div class="console-input-area">
+                                            <span class="console-prompt">&gt;</span>
+                                            <input type="text" class="console-input" id="consoleInput" placeholder='console.log("こんにちは");'>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- サンプル例 -->
+                            <div class="sample-examples">
+                                <h3 class="sample-examples__title">📚 いろいろな例を試してみよう</h3>
+                                <div class="sample-grid">
+                                    <div class="sample-item" onclick="runSample(this)">
+                                        <div class="sample-code">console.log("Hello, World!");</div>
+                                        <div class="sample-description">英語のメッセージ</div>
+                                    </div>
+                                    <div class="sample-item" onclick="runSample(this)">
+                                        <div class="sample-code">console.log("今日は晴れです");</div>
+                                        <div class="sample-description">日本語のメッセージ</div>
+                                    </div>
+                                    <div class="sample-item" onclick="runSample(this)">
+                                        <div class="sample-code">console.log("123456");</div>
+                                        <div class="sample-description">数字を文字として表示</div>
+                                    </div>
+                                    <div class="sample-item" onclick="runSample(this)">
+                                        <div class="sample-code">console.log("🎉 おめでとう！");</div>
+                                        <div class="sample-description">絵文字も使える</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- よくある間違い -->
+                            <div class="common-mistakes">
+                                <h3 class="common-mistakes__title">⚠️ よくある間違い</h3>
+                                <div class="mistake-examples">
+                                    <div class="mistake-item mistake-item--wrong">
+                                        <div class="mistake-code">console.log(こんにちは);</div>
+                                        <div class="mistake-label">❌ 引用符がない</div>
+                                    </div>
+                                    <div class="mistake-item mistake-item--correct">
+                                        <div class="mistake-code">console.log("こんにちは");</div>
+                                        <div class="mistake-label">✅ 正しい書き方</div>
+                                    </div>
+                                </div>
+                                <div class="mistake-examples">
+                                    <div class="mistake-item mistake-item--wrong">
+                                        <div class="mistake-code">console.log("こんにちは")</div>
+                                        <div class="mistake-label">❌ セミコロンがない</div>
+                                    </div>
+                                    <div class="mistake-item mistake-item--correct">
+                                        <div class="mistake-code">console.log("こんにちは");</div>
+                                        <div class="mistake-label">✅ セミコロンあり</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 重要ポイント -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">⭐ 重要ポイント</h2>
+                        <div class="content-section__body">
+                            <div class="key-points">
+                                <div class="key-point">
+                                    <div class="key-point__icon">📝</div>
+                                    <div class="key-point__content">
+                                        <h4>引用符は必須</h4>
+                                        <p>文字列を表示するときは、必ず引用符（"または'）で囲みましょう。</p>
+                                    </div>
+                                </div>
+                                <div class="key-point">
+                                    <div class="key-point__icon">🔧</div>
+                                    <div class="key-point__content">
+                                        <h4>console.logはデバッグの友</h4>
+                                        <p>プログラムの動作確認に非常に便利な機能です。</p>
+                                    </div>
+                                </div>
+                                <div class="key-point">
+                                    <div class="key-point__icon">✨</div>
+                                    <div class="key-point__content">
+                                        <h4>何でも表示できる</h4>
+                                        <p>日本語、英語、数字、絵文字など、様々な文字を表示できます。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ナビゲーション -->
+            <section class="navigation">
+                <div class="navigation__container">
+                    <div class="navigation__buttons">
+                        <a href="page1.html" class="navigation__button navigation__button--back">
+                            ← 前のページ：JavaScriptってなに？
+                        </a>
+                        <a href="page3.html" class="navigation__button navigation__button--next">
+                            次のページ：計算してみよう →
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- サイドバー -->
+        <aside class="sidebar">
+            <div class="sidebar__container">
+                <h3 class="sidebar__title">📋 第1週目 目次</h3>
+                <nav class="sidebar__nav">
+                    <a href="page1.html" class="sidebar__link">
+                        <span class="sidebar__number">1</span>
+                        JavaScriptってなに？
+                    </a>
+                    <a href="page2.html" class="sidebar__link sidebar__link--current">
+                        <span class="sidebar__number">2</span>
+                        「こんにちは」を表示しよう
+                    </a>
+                    <a href="page3.html" class="sidebar__link">
+                        <span class="sidebar__number">3</span>
+                        計算してみよう
+                    </a>
+                    <a href="page4.html" class="sidebar__link">
+                        <span class="sidebar__number">4</span>
+                        変数に入れてみよう
+                    </a>
+                    <a href="page5.html" class="sidebar__link">
+                        <span class="sidebar__number">5</span>
+                        文字列をつなげよう
+                    </a>
+                    <a href="page6.html" class="sidebar__link">
+                        <span class="sidebar__number">6</span>
+                        条件で分けよう
+                    </a>
+                    <a href="page7.html" class="sidebar__link">
+                        <span class="sidebar__number">7</span>
+                        くり返してみよう
+                    </a>
+                    <a href="page8.html" class="sidebar__link">
+                        <span class="sidebar__number">8</span>
+                        ふりかえり＆チャレンジ課題
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- フッター -->
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__text">
+                    ページ2：「こんにちは」を表示しよう | 第1週目 JavaScript超入門
+                </p>
+                <div class="footer__links">
+                    <a href="../index.html" class="footer__link">ホーム</a>
+                    <a href="index.html" class="footer__link">第1週目目次</a>
+                    <a href="page3.html" class="footer__link">次のページ</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // ページ固有のJavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // コンソールシミュレーター
+            const consoleInput = document.getElementById('consoleInput');
+            const consoleOutput = document.getElementById('consoleOutput');
+
+            consoleInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    const input = this.value.trim();
+                    if (input) {
+                        executeCode(input);
+                        this.value = '';
+                    }
+                }
+            });
+
+            function executeCode(code) {
+                // 入力を表示
+                const inputLine = document.createElement('div');
+                inputLine.className = 'console-line';
+                inputLine.innerHTML = `<span class="console-prompt">&gt;</span><span class="console-input-text">${code}</span>`;
+                consoleOutput.appendChild(inputLine);
+
+                // 結果を計算して表示
+                try {
+                    // console.logの場合は特別処理
+                    if (code.includes('console.log')) {
+                        const match = code.match(/console\.log\s*\(\s*["']([^"']*?)["']\s*\)/);
+                        if (match) {
+                            const message = match[1];
+                            const outputLine = document.createElement('div');
+                            outputLine.className = 'console-line console-line--output';
+                            outputLine.innerHTML = `<span class="console-result">${message}</span>`;
+                            consoleOutput.appendChild(outputLine);
+                        } else {
+                            // より複雑なconsole.logの場合
+                            eval(code);
+                        }
+                    } else {
+                        const result = eval(code);
+                        const outputLine = document.createElement('div');
+                        outputLine.className = 'console-line console-line--output';
+                        outputLine.innerHTML = `<span class="console-result">${result}</span>`;
+                        consoleOutput.appendChild(outputLine);
+                    }
+                } catch (error) {
+                    const errorLine = document.createElement('div');
+                    errorLine.className = 'console-line console-line--error';
+                    errorLine.innerHTML = `<span class="console-error">エラー: ${error.message}</span>`;
+                    consoleOutput.appendChild(errorLine);
+                }
+
+                // スクロールを最下部に
+                consoleOutput.scrollTop = consoleOutput.scrollHeight;
+            }
+
+            // console.logをオーバーライドしてシミュレーターに表示
+            const originalConsoleLog = console.log;
+            console.log = function(...args) {
+                const outputLine = document.createElement('div');
+                outputLine.className = 'console-line console-line--output';
+                outputLine.innerHTML = `<span class="console-result">${args.join(' ')}</span>`;
+                consoleOutput.appendChild(outputLine);
+                consoleOutput.scrollTop = consoleOutput.scrollHeight;
+                
+                // 元のconsole.logも実行
+                originalConsoleLog.apply(console, args);
+            };
+        });
+
+        // サンプル実行機能
+        function runSample(element) {
+            const code = element.querySelector('.sample-code').textContent;
+            const consoleInput = document.getElementById('consoleInput');
+            consoleInput.value = code;
+            
+            // Enterキーイベントをシミュレート
+            const event = new KeyboardEvent('keypress', { key: 'Enter' });
+            consoleInput.dispatchEvent(event);
+        }
+
+        // コンソールクリア機能
+        function clearConsole() {
+            const consoleOutput = document.getElementById('consoleOutput');
+            consoleOutput.innerHTML = '<div class="console-line"><span class="console-prompt">&gt;</span><span class="console-text">コンソールがクリアされました</span></div>';
+        }
+
+        // コードコピー機能
+        function copyCode(button) {
+            const codeBlock = button.parentElement.nextElementSibling.textContent;
+            navigator.clipboard.writeText(codeBlock).then(() => {
+                button.textContent = '✅ コピー完了';
+                setTimeout(() => {
+                    button.textContent = '📋 コピー';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
