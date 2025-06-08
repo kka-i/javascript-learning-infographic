@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページ3：オブジェクトってなに？ | 第3週目 データのまとまりと応用</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__nav">
+                    <a href="../index.html" class="header__home">🏠 ホーム</a>
+                    <div class="header__breadcrumb">
+                        <a href="index.html" class="breadcrumb__item">第3週目</a>
+                        <span class="breadcrumb__separator">></span>
+                        <span class="breadcrumb__item breadcrumb__item--current">ページ3</span>
+                    </div>
+                </div>
+                <h1 class="header__title">
+                    <span class="header__icon">📙</span>
+                    ページ3：オブジェクトってなに？
+                </h1>
+                <p class="header__subtitle">プロパティでデータをまとめよう</p>
+            </div>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress-bar__container">
+                <div class="progress-bar__track">
+                    <div class="progress-bar__fill progress-bar__fill--week3" style="width: 50%"></div>
+                </div>
+                <span class="progress-bar__text">進捗: 50% (3/6ページ)</span>
+            </div>
+        </div>
+
+        <main class="main">
+            <section class="content">
+                <div class="content__container">
+                    <div class="content-section">
+                        <h2 class="content-section__title">🌟 詳細解説</h2>
+                        <div class="content-section__body">
+                            <p class="content-text">オブジェクトはキーと値の組み合わせでデータを管理する仕組みです。</p>
+                            <pre class="code-example__code"><code>let student = {
+    name: "たろう",
+    age: 16,
+    grade: "高校1年"
+};
+console.log(student.name);</code></pre>
+                        </div>
+                    </div>
+                    <div class="content-section">
+                        <h2 class="content-section__title">💡 課題</h2>
+                        <div class="content-section__body">
+                            <p class="content-text">生徒オブジェクトを作り、<code>name</code> と <code>age</code> を表示してみましょう。</p>
+                        </div>
+                    </div>
+                    <div class="content-section">
+                        <h2 class="content-section__title">✅ 模範解答</h2>
+                        <div class="content-section__body">
+                            <pre class="code-example__code"><code>let student = {
+    name: "田中太郎",
+    age: 17,
+    grade: "高校2年"
+};
+console.log(student.name);
+console.log(student.age);</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__text">第3週目：データのまとまりと応用</p>
+                <div class="footer__links">
+                    <a href="../index.html" class="footer__link">ホーム</a>
+                    <a href="index.html" class="footer__link">第3週目目次</a>
+                    <a href="page4.html" class="footer__link">次のページ</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof updateProgress === 'function') {
+                updateProgress('week3', 3);
+            }
+            if (typeof highlightCurrentPage === 'function') {
+                highlightCurrentPage();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページ1：配列ってなに？ | 第3週目 データのまとまりと応用</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__nav">
+                    <a href="../index.html" class="header__home">🏠 ホーム</a>
+                    <div class="header__breadcrumb">
+                        <a href="index.html" class="breadcrumb__item">第3週目</a>
+                        <span class="breadcrumb__separator">></span>
+                        <span class="breadcrumb__item breadcrumb__item--current">ページ1</span>
+                    </div>
+                </div>
+                <h1 class="header__title">
+                    <span class="header__icon">📙</span>
+                    ページ1：配列ってなに？
+                </h1>
+                <p class="header__subtitle">配列の基本を学ぼう</p>
+            </div>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress-bar__container">
+                <div class="progress-bar__track">
+                    <div class="progress-bar__fill progress-bar__fill--week3" style="width: 16.7%"></div>
+                </div>
+                <span class="progress-bar__text">進捗: 16.7% (1/6ページ)</span>
+            </div>
+        </div>
+
+        <main class="main">
+            <section class="content">
+                <div class="content__container">
+                    <div class="content-section">
+                        <h2 class="content-section__title">🌟 詳細解説</h2>
+                        <div class="content-section__body">
+                            <p class="content-text">配列は複数の値を一つにまとめて保存できるデータ構造です。同じ型のデータを管理するのに便利です。</p>
+                            <pre class="code-example__code"><code>let fruits = ["りんご", "みかん", "バナナ"];
+console.log(fruits[0]);
+console.log(fruits.length);</code></pre>
+                        </div>
+                    </div>
+                    <div class="content-section">
+                        <h2 class="content-section__title">💡 課題</h2>
+                        <div class="content-section__body">
+                            <p class="content-text">配列 <code>colors</code> を作り、要素数を表示してみましょう。</p>
+                        </div>
+                    </div>
+                    <div class="content-section">
+                        <h2 class="content-section__title">✅ 模範解答</h2>
+                        <div class="content-section__body">
+                            <pre class="code-example__code"><code>let colors = ["赤", "青", "緑", "黄", "紫"];
+console.log(colors.length);</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__text">第3週目：データのまとまりと応用</p>
+                <div class="footer__links">
+                    <a href="../index.html" class="footer__link">ホーム</a>
+                    <a href="index.html" class="footer__link">第3週目目次</a>
+                    <a href="page2.html" class="footer__link">次のページ</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof updateProgress === 'function') {
+                updateProgress('week3', 1);
+            }
+            if (typeof highlightCurrentPage === 'function') {
+                highlightCurrentPage();
+            }
+        });
+    </script>
+</body>
+</html>

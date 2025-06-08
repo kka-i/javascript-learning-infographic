@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページ6：まとめ＆チャレンジ | 第3週目 データのまとまりと応用</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__nav">
+                    <a href="../index.html" class="header__home">🏠 ホーム</a>
+                    <div class="header__breadcrumb">
+                        <a href="index.html" class="breadcrumb__item">第3週目</a>
+                        <span class="breadcrumb__separator">></span>
+                        <span class="breadcrumb__item breadcrumb__item--current">ページ6</span>
+                    </div>
+                </div>
+                <h1 class="header__title">
+                    <span class="header__icon">📙</span>
+                    ページ6：まとめ＆チャレンジ課題
+                </h1>
+                <p class="header__subtitle">第3週目の総仕上げ</p>
+            </div>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress-bar__container">
+                <div class="progress-bar__track">
+                    <div class="progress-bar__fill progress-bar__fill--week3" style="width: 100%"></div>
+                </div>
+                <span class="progress-bar__text">進捗: 100% (6/6ページ)</span>
+            </div>
+        </div>
+
+        <main class="main">
+            <section class="content">
+                <div class="content__container">
+                    <div class="content-section">
+                        <h2 class="content-section__title">🌟 第3週目で学んだこと</h2>
+                        <div class="content-section__body">
+                            <p class="content-text">配列とオブジェクトの基礎、そして関数の応用について学びました。</p>
+                        </div>
+                    </div>
+                    <div class="content-section">
+                        <h2 class="content-section__title">💡 週末チャレンジ課題</h2>
+                        <div class="content-section__body">
+                            <p class="content-text">生徒名配列と点数配列からオブジェクト配列を作り、平均点を計算して表示してみましょう。</p>
+                        </div>
+                    </div>
+                    <div class="content-section">
+                        <h2 class="content-section__title">✅ 模範解答</h2>
+                        <div class="content-section__body">
+                            <pre class="code-example__code"><code>let names = ["田中太郎", "佐藤花子"];
+let scores = [85, 92];
+let students = [];
+for (let i = 0; i < names.length; i++) {
+    students.push({ name: names[i], score: scores[i] });
+}
+let total = 0;
+for (let s of students) total += s.score;
+console.log("平均点:", total / students.length);</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__text">第3週目：データのまとまりと応用</p>
+                <div class="footer__links">
+                    <a href="../index.html" class="footer__link">ホーム</a>
+                    <a href="index.html" class="footer__link">第3週目目次</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof updateProgress === 'function') {
+                updateProgress('week3', 6);
+            }
+            if (typeof highlightCurrentPage === 'function') {
+                highlightCurrentPage();
+            }
+        });
+    </script>
+</body>
+</html>
