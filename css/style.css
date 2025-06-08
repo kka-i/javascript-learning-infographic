@@ -1285,6 +1285,33 @@ code {
     font-size: 0.9em;
 }
 
+/* ========================================
+   シンタックスハイライト
+======================================== */
+code .keyword {
+    color: #d35400;
+    font-weight: bold;
+}
+
+code .string {
+    color: #27ae60;
+}
+
+code .number {
+    color: #2980b9;
+}
+
+code .comment {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* syntax parts highlighting */
+.syntax-part__keyword {
+    color: #d35400;
+    font-weight: bold;
+}
+
 /* 強調表示 */
 strong {
     font-weight: bold;

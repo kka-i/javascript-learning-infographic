@@ -509,7 +509,13 @@ function setupCodeHighlighting() {
  * JavaScriptのシンタックスハイライト
  */
 function highlightJavaScript(element) {
-	let code = element.innerHTML;
+        let code = element.textContent;
+
+        // HTML特殊文字をエスケープ
+        code = code
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
 
 	// キーワードのハイライト
 	const keywords = [
