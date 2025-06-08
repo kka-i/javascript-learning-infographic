@@ -33,15 +33,32 @@
         <main class="main">
             <section class="content">
                 <div class="content__container">
-                    <div class="content-section">
+<div class="content-section">
                         <h2 class="content-section__title">🌟 詳細解説</h2>
                         <div class="content-section__body">
-                            <p>
-                                const で宣言した変数は再代入できません。ただしオブジェクトの中身は変更可能である点に注意してください。
+                            <p class="content-text">
+                                <code>const</code> で宣言した変数は再代入できませんが、オブジェクトのプロパティは変更できます。この性質を理解して使い分けましょう。
                             </p>
+
+                            <div class="info-box info-box--primary">
+                                <h3 class="info-box__title">📌 const の注意点</h3>
+                                <ul class="info-box__list">
+                                    <li>再代入は不可</li>
+                                    <li>オブジェクト内部の変更は可能</li>
+                                    <li>宣言時に初期値が必須</li>
+                                </ul>
+                            </div>
+
+                            <div class="code-example">
+                                <div class="code-example__header">
+                                    <span class="code-example__title">例</span>
+                                </div>
+                                <pre class="code-example__code"><code>const user = { name: 'Ken' };
+user.name = 'Yuki';
+console.log(user);</code></pre>
+                            </div>
                         </div>
                     </div>
-                    <div class="content-section">
                         <h2 class="content-section__title">💡 課題</h2>
                         <div class="content-section__body">
                             <p>const で宣言したオブジェクトのプロパティを書き換えてみよう。</p>

@@ -33,15 +33,37 @@
         <main class="main">
             <section class="content">
                 <div class="content__container">
-                    <div class="content-section">
+<div class="content-section">
                         <h2 class="content-section__title">🌟 詳細解説</h2>
                         <div class="content-section__body">
-                            <p>
-                                if 文は条件によって処理を分けるための基本構文です。<code>else if</code>を使えば複数条件をチェックできます。
+                            <p class="content-text">
+                                <code>if</code> 文は条件に応じて処理を分岐させる基本構文です。<code>else if</code> を使うと複数の条件を順番に判定できます。
                             </p>
+
+                            <div class="info-box info-box--primary">
+                                <h3 class="info-box__title">📌 ここを押さえよう</h3>
+                                <ul class="info-box__list">
+                                    <li>最初に一致した条件のブロックだけが実行される</li>
+                                    <li>条件は上から順番に評価される</li>
+                                    <li><code>else</code> はどの条件にも当てはまらない場合に実行</li>
+                                </ul>
+                            </div>
+
+                            <div class="code-example">
+                                <div class="code-example__header">
+                                    <span class="code-example__title">例</span>
+                                </div>
+                                <pre class="code-example__code"><code>let age = 18;
+if (age >= 20) {
+    console.log('成人');
+} else if (age >= 13) {
+    console.log('ティーン');
+} else {
+    console.log('子供');
+}</code></pre>
+                            </div>
                         </div>
                     </div>
-                    <div class="content-section">
                         <h2 class="content-section__title">💡 課題</h2>
                         <div class="content-section__body">
                             <p>変数<code>age</code>の値によって「成人」「ティーン」「子供」と表示するプログラムを書いてみよう。</p>

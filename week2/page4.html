@@ -32,16 +32,33 @@
         </div>
         <main class="main">
             <section class="content">
-                <div class="content__container">
-                    <div class="content-section">
+                    <div class="content__container">
+<div class="content-section">
                         <h2 class="content-section__title">🌟 詳細解説</h2>
                         <div class="content-section__body">
-                            <p>
-                                for 文は指定回数繰り返したいときに使います。初期値、条件、更新処理の3つを設定してループを作成します。
+                            <p class="content-text">
+                                <code>for</code> 文は初期化・条件判定・更新処理の3つを設定して決まった回数だけ繰り返しを行います。
                             </p>
+
+                            <div class="info-box info-box--primary">
+                                <h3 class="info-box__title">📌 重要ポイント</h3>
+                                <ul class="info-box__list">
+                                    <li>初期化ではカウンター変数を宣言</li>
+                                    <li>条件式が <code>false</code> になるまでループ</li>
+                                    <li>更新処理でカウンターを増減</li>
+                                </ul>
+                            </div>
+
+                            <div class="code-example">
+                                <div class="code-example__header">
+                                    <span class="code-example__title">例</span>
+                                </div>
+                                <pre class="code-example__code"><code>for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}</code></pre>
+                            </div>
                         </div>
                     </div>
-                    <div class="content-section">
                         <h2 class="content-section__title">💡 課題</h2>
                         <div class="content-section__body">
                             <p>1から5までの数字を順番に表示するコードを書いてみよう。</p>
