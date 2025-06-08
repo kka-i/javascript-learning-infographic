@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Page 7: 繰り返し処理 | JavaScript超入門</title>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="nav-container">
+				<div class="nav-brand">
+					<a href="../index.html">JavaScript超入門</a>
+				</div>
+				<div class="nav-menu">
+					<a href="../index.html" class="nav-link">ホーム</a>
+					<a href="index.html" class="nav-link">Week 1</a>
+					<a href="../week2/index.html" class="nav-link">Week 2</a>
+					<a href="../week3/index.html" class="nav-link">Week 3</a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="sidebar">
+				<div class="week-progress">
+					<h3>Week 1 進捗</h3>
+					<div class="progress-list">
+						<a href="page1.html" class="progress-item completed">
+							<span class="progress-number">1</span>
+							<span class="progress-title">JavaScriptとは</span>
+						</a>
+						<a href="page2.html" class="progress-item completed">
+							<span class="progress-number">2</span>
+							<span class="progress-title">console.log()</span>
+						</a>
+						<a href="page3.html" class="progress-item completed">
+							<span class="progress-number">3</span>
+							<span class="progress-title">四則演算</span>
+						</a>
+						<a href="page4.html" class="progress-item completed">
+							<span class="progress-number">4</span>
+							<span class="progress-title">変数</span>
+						</a>
+						<a href="page5.html" class="progress-item completed">
+							<span class="progress-number">5</span>
+							<span class="progress-title">文字列の連結</span>
+						</a>
+						<a href="page6.html" class="progress-item completed">
+							<span class="progress-number">6</span>
+							<span class="progress-title">条件分岐</span>
+						</a>
+						<a href="page7.html" class="progress-item current">
+							<span class="progress-number">7</span>
+							<span class="progress-title">繰り返し処理</span>
+						</a>
+						<a href="page8.html" class="progress-item">
+							<span class="progress-number">8</span>
+							<span class="progress-title">復習とチャレンジ</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<main class="main-content">
+				<div class="breadcrumb">
+					<a href="../index.html">ホーム</a> > <a href="index.html">Week 1</a> >
+					<span>Page 7: 繰り返し処理</span>
+				</div>
+
+				<div class="page-header">
+					<div class="page-number">Page 7</div>
+					<h1 class="page-title">繰り返し処理</h1>
+					<p class="page-subtitle">
+						同じ処理を何度も実行する方法を学びます
+					</p>
+				</div>
+
+				<div class="content-section">
+					<h2>繰り返し処理とは？</h2>
+					<div class="concept-card">
+						<div class="concept-visual">
+							<div class="loop-demo">
+								<div class="loop-counter">i = 1</div>
+								<div class="loop-arrow">→</div>
+								<div class="loop-action">処理実行</div>
+								<div class="loop-arrow">→</div>
+								<div class="loop-counter">i = 2</div>
+								<div class="loop-arrow">→</div>
+								<div class="loop-action">処理実行</div>
+								<div class="loop-arrow">→</div>
+								<div class="loop-counter">...</div>
+							</div>
+						</div>
+						<div class="concept-text">
+							<p>
+								繰り返し処理とは、同じ処理を指定した回数だけ実行することです。JavaScriptでは<code>for</code>文を使って繰り返し処理を書きます。
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-section">
+					<h2>基本的なfor文</h2>
+					<div class="code-example">
+						<div class="code-header">
+							<span class="code-title">for文の基本形</span>
+							<button class="copy-btn" onclick="copyCode(this)">コピー</button>
+						</div>
+						<pre class="code-block"><code>for (初期値; 条件; 増減) {
+    // 繰り返したい処理
+}
+
+// 具体例：1から5まで表示
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+
+// 結果：
+// 1
+// 2
+// 3
+// 4
+// 5</code></pre>
+					</div>
+
+					<div class="info-card">
+						<div class="info-icon">💡</div>
+						<div class="info-content">
+							<h3>for文の各部分の説明</h3>
+							<ul>
+								<li><strong>初期値</strong>：ループの開始時に1回だけ実行</li>
+								<li><strong>条件</strong>：この条件が真の間、ループが続く</li>
+								<li><strong>増減</strong>：1回ループするたびに実行</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="interactive-console">
+						<div class="console-header">
+							<span class="console-title">🔧 for文を試してみよう</span>
+							<button class="run-btn" onclick="runForCode()">実行</button>
+							<button class="clear-btn" onclick="clearConsole('forConsole')">
+								クリア
+							</button>
+						</div>
+						<div class="console-input">
+							<textarea
+								id="forInput"
+								placeholder="for文を書いてみましょう..."
+							>
+// 1から3まで表示
+for (let i = 1; i <= 3; i++) {
+    console.log(i + "回目のメッセージです");
+}
+
+console.log("ループ終了！");</textarea
+							>
+						</div>
+						<div class="console-output" id="forConsole">
+							<div class="output-line">
+								コードを実行すると結果がここに表示されます
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-section">
+					<h2>様々なfor文のパターン</h2>
+					<div class="pattern-grid">
+						<div class="pattern-card">
+							<h3>🔢 0から始まるパターン</h3>
+							<div class="code-example">
+								<pre class="code-block"><code>// プログラミングでよく使う形
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+// 結果：0, 1, 2, 3, 4</code></pre>
+							</div>
+						</div>
+
+						<div class="pattern-card">
+							<h3>📈 2ずつ増加</h3>
+							<div class="code-example">
+								<pre class="code-block"><code>// 偶数を表示
+for (let i = 0; i <= 10; i += 2) {
+    console.log(i);
+}
+// 結果：0, 2, 4, 6, 8, 10</code></pre>
+							</div>
+						</div>
+
+						<div class="pattern-card">
+							<h3>📉 逆順（減少）</h3>
+							<div class="code-example">
+								<pre class="code-block"><code>// カウントダウン
+for (let i = 5; i >= 1; i--) {
+    console.log(i);
+}
+console.log("発射！");
+// 結果：5, 4, 3, 2, 1, 発射！</code></pre>
+							</div>
+						</div>
+
+						<div class="pattern-card">
+							<h3>🔤 文字列との組み合わせ</h3>
+							<div class="code-example">
+								<pre class="code-block"><code>// メッセージと回数を組み合わせ
+for (let i = 1; i <= 3; i++) {
+    console.log("第" + i + "章");
+}
+// 結果：第1章, 第2章, 第3章</code></pre>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-section">
+					<h2>実践的な例</h2>
+					<div class="example-grid">
+						<div class="example-card">
+							<h3>🧮 掛け算の練習</h3>
+							<div class="code-example">
+								<pre class="code-block"><code>// 3の段を表示
+for (let i = 1; i <= 9; i++) {
+    let result = 3 * i;
+    console.log("3 × " + i + " = " + result);
+}</code></pre>
+							</div>
+						</div>
+
+						<div class="example-card">
+							<h3>📊 合計の計算</h3>
+							<div class="code-example">
+								<pre class="code-block"><code>// 1から10までの合計
+let sum = 0;
+for (let i = 1; i <= 10; i++) {
+    sum = sum + i;
+}
+console.log("合計：" + sum);</code></pre>
+							</div>
+						</div>
+
+						<div class="example-card">
+							<h3>🎵 歌詞の生成</h3>
+							<div class="code-example">
+								<pre class="code-block"><code>// 「○匹の子豚」の歌
+for (let i = 3; i >= 1; i--) {
+    console.log(i + "匹の子豚が");
+}
+console.log("みんなで踊った");</code></pre>
+							</div>
+						</div>
+					</div>
+
+					<div class="interactive-console">
+						<div class="console-header">
+							<span class="console-title">🔧 実践例を試そう</span>
+							<button class="run-btn" onclick="runPracticeCode()">実行</button>
+							<button
+								class="clear-btn"
+								onclick="clearConsole('practiceConsole')"
+							>
+								クリア
+							</button>
+						</div>
+						<div class="console-input">
+							<textarea
+								id="practiceInput"
+								placeholder="実践的なfor文を書いてみましょう..."
+							>
+// 5の段の九九表を作成
+console.log("5の段");
+console.log("--------");
+
+for (let i = 1; i <= 9; i++) {
+    let result = 5 * i;
+    console.log("5 × " + i + " = " + result);
+}</textarea
+							>
+						</div>
+						<div class="console-output" id="practiceConsole">
+							<div class="output-line">
+								コードを実行すると結果がここに表示されます
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-section">
+					<h2>for文とif文の組み合わせ</h2>
+					<div class="info-card">
+						<div class="info-icon">🔥</div>
+						<div class="info-content">
+							<h3>条件付きの繰り返し</h3>
+							<p>
+								for文の中でif文を使うと、条件に合う場合だけ処理を実行できます。
+							</p>
+						</div>
+					</div>
+
+					<div class="code-example">
+						<div class="code-header">
+							<span class="code-title">for文 + if文</span>
+							<button class="copy-btn" onclick="copyCode(this)">コピー</button>
+						</div>
+						<pre class="code-block"><code>// 1から10までの偶数だけ表示
+for (let i = 1; i <= 10; i++) {
+    if (i % 2 == 0) {
+        console.log(i + "は偶数です");
+    }
+}
+
+// 3の倍数の時だけ特別なメッセージ
+for (let i = 1; i <= 15; i++) {
+    if (i % 3 == 0) {
+        console.log(i + "：3の倍数！");
+    } else {
+        console.log(i);
+    }
+}</code></pre>
+					</div>
+
+					<div class="interactive-console">
+						<div class="console-header">
+							<span class="console-title">🔧 組み合わせを試そう</span>
+							<button class="run-btn" onclick="runCombinedCode()">実行</button>
+							<button
+								class="clear-btn"
+								onclick="clearConsole('combinedConsole')"
+							>
+								クリア
+							</button>
+						</div>
+						<div class="console-input">
+							<textarea
+								id="combinedInput"
+								placeholder="for文とif文を組み合わせてみましょう..."
+							>
+// 1から20までの数で、5の倍数の時だけメッセージを表示
+for (let i = 1; i <= 20; i++) {
+    if (i % 5 == 0) {
+        console.log(i + "：5の倍数です！");
+    } else {
+        console.log(i);
+    }
+}</textarea
+							>
+						</div>
+						<div class="console-output" id="combinedConsole">
+							<div class="output-line">
+								コードを実行すると結果がここに表示されます
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-section">
+					<h2>チャレンジ問題</h2>
+					<div class="challenge-card">
+						<h3>🎯 FizzBuzz問題</h3>
+						<p>1から15までの数字を表示するプログラムを作ってください。ただし：</p>
+						<ul>
+							<li>3の倍数の時は「Fizz」を表示</li>
+							<li>5の倍数の時は「Buzz」を表示</li>
+							<li>3と5の両方の倍数の時は「FizzBuzz」を表示</li>
+							<li>それ以外は数字をそのまま表示</li>
+						</ul>
+
+						<div class="interactive-console">
+							<div class="console-header">
+								<span class="console-title">🎯 チャレンジ実行エリア</span>
+								<button class="run-btn" onclick="runChallengeCode()">
+									実行
+								</button>
+								<button
+									class="clear-btn"
+									onclick="clearConsole('challengeConsole')"
+								>
+									クリア
+								</button>
+							</div>
+							<div class="console-input">
+								<textarea
+									id="challengeInput"
+									placeholder="FizzBuzz問題にチャレンジしてみましょう..."
+								>
+// FizzBuzz問題
+for (let i = 1; i <= 15; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+        console.log("FizzBuzz");
+    } else if (i % 3 == 0) {
+        console.log("Fizz");
+    } else if (i % 5 == 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+}</textarea
+								>
+							</div>
+							<div class="console-output" id="challengeConsole">
+								<div class="output-line">
+									チャレンジコードを実行すると結果がここに表示されます
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="navigation-section">
+					<div class="nav-buttons">
+						<a href="page6.html" class="nav-btn prev-btn">
+							<span class="nav-arrow">←</span>
+							<span class="nav-text">
+								<span class="nav-label">前のページ</span>
+								<span class="nav-title">条件分岐</span>
+							</span>
+						</a>
+						<a href="page8.html" class="nav-btn next-btn">
+							<span class="nav-text">
+								<span class="nav-label">次のページ</span>
+								<span class="nav-title">復習とチャレンジ</span>
+							</span>
+							<span class="nav-arrow">→</span>
+						</a>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<script src="../js/script.js"></script>
+		<script>
+			// ページ固有のJavaScript
+			function runForCode() {
+				const code = document.getElementById("forInput").value;
+				const console = document.getElementById("forConsole");
+				runCodeInConsole(code, console);
+			}
+
+			function runPracticeCode() {
+				const code = document.getElementById("practiceInput").value;
+				const console = document.getElementById("practiceConsole");
+				runCodeInConsole(code, console);
+			}
+
+			function runCombinedCode() {
+				const code = document.getElementById("combinedInput").value;
+				const console = document.getElementById("combinedConsole");
+				runCodeInConsole(code, console);
+			}
+
+			function runChallengeCode() {
+				const code = document.getElementById("challengeInput").value;
+				const console = document.getElementById("challengeConsole");
+				runCodeInConsole(code, console);
+			}
+
+			// ページ読み込み時の処理
+			document.addEventListener("DOMContentLoaded", function () {
+				// script.jsの関数が利用可能になるまで待機
+				if (
+					typeof updateProgress === "function" &&
+					typeof highlightCurrentPage === "function"
+				) {
+					updateProgress("week1", 7);
+					highlightCurrentPage();
+				} else {
+					// 関数が利用可能になるまで少し待つ
+					setTimeout(function () {
+						if (typeof updateProgress === "function") {
+							updateProgress("week1", 7);
+						}
+						if (typeof highlightCurrentPage === "function") {
+							highlightCurrentPage();
+						}
+					}, 100);
+				}
+			});
+		</script>
+	</body>
+</html>
