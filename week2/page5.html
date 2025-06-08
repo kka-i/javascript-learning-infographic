@@ -37,15 +37,32 @@
         <main class="main">
             <section class="content">
                 <div class="content__container">
-                    <div class="content-section">
                         <h2 class="content-section__title">🌟 詳細解説</h2>
                         <div class="content-section__body">
-                            <p>
-                                関数は処理をひとまとまりにして再利用可能にする仕組みです。<code>return</code>を使うと結果を呼び出し元へ返せます。
+                            <p class="content-text">
+                                関数は処理をひとまとまりにして再利用できるようにする仕組みです。<code>return</code> 文を使うと呼び出し元へ値を返すことができます。
                             </p>
+
+                            <div class="info-box info-box--primary">
+                                <h3 class="info-box__title">📌 関数のポイント</h3>
+                                <ul class="info-box__list">
+                                    <li><code>function</code> キーワードで宣言</li>
+                                    <li>引数を使って値を受け取れる</li>
+                                    <li><code>return</code> で結果を返す</li>
+                                </ul>
+                            </div>
+
+                            <div class="code-example">
+                                <div class="code-example__header">
+                                    <span class="code-example__title">例</span>
+                                </div>
+                                <pre class="code-example__code"><code>function double(n) {
+    return n * 2;
+}
+console.log(double(5)); // 10</code></pre>
+                            </div>
                         </div>
                     </div>
-                    <div class="content-section">
                         <h2 class="content-section__title">💡 課題</h2>
                         <div class="content-section__body">
                             <p>引数に渡された数値を2倍にして返す<code>double</code>関数を作成し、5を渡して結果を表示しよう。</p>

@@ -37,13 +37,32 @@
         <main class="main">
             <section class="content">
                 <div class="content__container">
-                    <div class="content-section">
+<div class="content-section">
                         <h2 class="content-section__title">🌟 詳細解説</h2>
                         <div class="content-section__body">
-                            <p>
-                                比較演算子は値を比べて真偽値を返します。<code>==</code>と<code>===</code>の違いにも注意しましょう。
-                                また論理演算子<code>&amp;&amp;</code>や<code>||</code>を使うと複数条件を組み合わせられます。
+                            <p class="content-text">
+                                比較演算子は値を比べて結果を <code>true</code> または <code>false</code> で返します。
+                                厳密等価演算子 <code>===</code> は型も比較する点に注意しましょう。
+                                また論理演算子 <code>&amp;&amp;</code> (AND) と <code>||</code> (OR) を使うと複数条件をまとめられます。
                             </p>
+
+                            <div class="info-box info-box--primary">
+                                <h3 class="info-box__title">📌 覚えておきたい演算子</h3>
+                                <ul class="info-box__list">
+                                    <li><code>==</code> と <code>===</code> : 後者は型も比較</li>
+                                    <li><code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code> : 大小比較</li>
+                                    <li><code>&amp;&amp;</code> / <code>||</code> : 条件の組み合わせ</li>
+                                </ul>
+                            </div>
+
+                            <div class="code-example">
+                                <div class="code-example__header">
+                                    <span class="code-example__title">例</span>
+                                </div>
+                                <pre class="code-example__code"><code>let x = 5;
+x > 3 && x < 10;   // true
+x === '5';         // false</code></pre>
+                            </div>
                         </div>
                     </div>
                     <div class="content-section">
