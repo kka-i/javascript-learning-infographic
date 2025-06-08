@@ -3,115 +3,76 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Page 6: 条件分岐 | JavaScript超入門</title>
+		<title>ページ6：条件分岐 | 第1週目 JavaScript超入門</title>
 		<link rel="stylesheet" href="../css/style.css" />
 	</head>
 	<body>
-		<nav class="navbar">
-			<div class="nav-container">
-				<div class="nav-brand">
-					<a href="../index.html">JavaScript超入門</a>
-				</div>
-				<div class="nav-menu">
-					<a href="../index.html" class="nav-link">ホーム</a>
-					<a href="index.html" class="nav-link">Week 1</a>
-					<a href="../week2/index.html" class="nav-link">Week 2</a>
-					<a href="../week3/index.html" class="nav-link">Week 3</a>
-				</div>
-			</div>
-		</nav>
-
-		<div class="container">
-			<div class="sidebar">
-				<div class="week-progress">
-					<h3>Week 1 進捗</h3>
-					<div class="progress-list">
-						<a href="page1.html" class="progress-item completed">
-							<span class="progress-number">1</span>
-							<span class="progress-title">JavaScriptとは</span>
-						</a>
-						<a href="page2.html" class="progress-item completed">
-							<span class="progress-number">2</span>
-							<span class="progress-title">console.log()</span>
-						</a>
-						<a href="page3.html" class="progress-item completed">
-							<span class="progress-number">3</span>
-							<span class="progress-title">四則演算</span>
-						</a>
-						<a href="page4.html" class="progress-item completed">
-							<span class="progress-number">4</span>
-							<span class="progress-title">変数</span>
-						</a>
-						<a href="page5.html" class="progress-item completed">
-							<span class="progress-number">5</span>
-							<span class="progress-title">文字列の連結</span>
-						</a>
-						<a href="page6.html" class="progress-item current">
-							<span class="progress-number">6</span>
-							<span class="progress-title">条件分岐</span>
-						</a>
-						<a href="page7.html" class="progress-item">
-							<span class="progress-number">7</span>
-							<span class="progress-title">繰り返し処理</span>
-						</a>
-						<a href="page8.html" class="progress-item">
-							<span class="progress-number">8</span>
-							<span class="progress-title">復習とチャレンジ</span>
-						</a>
+		<div class="page">
+			<!-- ヘッダー -->
+			<header class="header">
+				<div class="header__container">
+					<div class="header__nav">
+						<a href="../index.html" class="header__home">🏠 ホーム</a>
+						<div class="header__breadcrumb">
+							<a href="index.html" class="breadcrumb__item">第1週目</a>
+							<span class="breadcrumb__separator">></span>
+							<span class="breadcrumb__item breadcrumb__item--current"
+								>ページ6</span
+							>
+						</div>
 					</div>
+					<h1 class="header__title">
+						<span class="header__icon">📘</span>
+						ページ6：条件分岐
+					</h1>
+					<p class="header__subtitle">条件によって処理を変える方法を学びます</p>
+				</div>
+			</header>
+
+			<!-- 進捗バー -->
+			<div class="progress-bar">
+				<div class="progress-bar__container">
+					<div class="progress-bar__track">
+						<div
+							class="progress-bar__fill progress-bar__fill--week1"
+							style="width: 75%"
+						></div>
+					</div>
+					<span class="progress-bar__text">進捗: 75% (6/8ページ)</span>
 				</div>
 			</div>
 
-			<main class="main-content">
-				<div class="breadcrumb">
-					<a href="../index.html">ホーム</a> > <a href="index.html">Week 1</a> >
-					<span>Page 6: 条件分岐</span>
-				</div>
+			<!-- メインコンテンツ -->
+			<main class="main">
+				<!-- 学習内容 -->
+				<section class="content">
+					<div class="content__container">
+						<!-- 詳細解説 -->
+						<div class="content-section">
+							<h2 class="content-section__title">🌟 詳細解説</h2>
+							<div class="content-section__body">
+								<p class="content-text">
+									条件分岐とは、「もし○○なら△△をする」という処理です。JavaScriptでは<code>if</code>文を使って条件分岐を書きます。
+								</p>
 
-				<div class="page-header">
-					<div class="page-number">Page 6</div>
-					<h1 class="page-title">条件分岐</h1>
-					<p class="page-subtitle">
-						条件によって処理を変える方法を学びます
-					</p>
-				</div>
-
-				<div class="content-section">
-					<h2>条件分岐とは？</h2>
-					<div class="concept-card">
-						<div class="concept-visual">
-							<div class="flowchart">
-								<div class="flowchart-start">開始</div>
-								<div class="flowchart-arrow">↓</div>
-								<div class="flowchart-condition">条件をチェック</div>
-								<div class="flowchart-branches">
-									<div class="flowchart-branch">
-										<span class="branch-label">真（true）</span>
-										<div class="flowchart-action">処理A</div>
-									</div>
-									<div class="flowchart-branch">
-										<span class="branch-label">偽（false）</span>
-										<div class="flowchart-action">処理B</div>
-									</div>
+								<div class="info-box info-box--primary">
+									<h3 class="info-box__title">📝 if文の基本構文</h3>
+									<ul class="info-box__list">
+										<li><code>if</code>キーワードで条件分岐を開始</li>
+										<li>括弧<code>()</code>の中に条件を書く</li>
+										<li>波括弧<code>{}</code>の中に実行する処理を書く</li>
+										<li>条件が真（true）の場合のみ処理が実行される</li>
+									</ul>
 								</div>
-							</div>
-						</div>
-						<div class="concept-text">
-							<p>
-								条件分岐とは、「もし○○なら△△をする」という処理です。JavaScriptでは<code>if</code>文を使って条件分岐を書きます。
-							</p>
-						</div>
-					</div>
-				</div>
 
-				<div class="content-section">
-					<h2>基本的なif文</h2>
-					<div class="code-example">
-						<div class="code-header">
-							<span class="code-title">if文の基本形</span>
-							<button class="copy-btn" onclick="copyCode(this)">コピー</button>
-						</div>
-						<pre class="code-block"><code>if (条件) {
+								<div class="code-example">
+									<div class="code-example__header">
+										<span class="code-example__title">if文の基本形</span>
+										<button class="code-example__copy" onclick="copyCode(this)">
+											📋 コピー
+										</button>
+									</div>
+									<pre class="code-example__code"><code>if (条件) {
     // 条件が真の時に実行される処理
 }
 
@@ -119,349 +80,144 @@
 let score = 85;
 
 if (score >= 70) {
-    console.log("合格です！");
-}
-
-// 年齢の例
-let age = 20;
-
-if (age >= 18) {
-    console.log("成人です");
-}</code></pre>
-					</div>
-
-					<div class="interactive-console">
-						<div class="console-header">
-							<span class="console-title">🔧 if文を試してみよう</span>
-							<button class="run-btn" onclick="runIfCode()">実行</button>
-							<button class="clear-btn" onclick="clearConsole('ifConsole')">
-								クリア
-							</button>
-						</div>
-						<div class="console-input">
-							<textarea
-								id="ifInput"
-								placeholder="if文を書いてみましょう..."
-							>
-let temperature = 25;
-
-if (temperature >= 30) {
-    console.log("暑いですね！");
-}
-
-if (temperature < 10) {
-    console.log("寒いですね！");
-}
-
-console.log("現在の気温は" + temperature + "度です");</textarea
-							>
-						</div>
-						<div class="console-output" id="ifConsole">
-							<div class="output-line">
-								コードを実行すると結果がここに表示されます
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="content-section">
-					<h2>比較演算子</h2>
-					<div class="comparison-grid">
-						<div class="comparison-card">
-							<h3>==（等しい）</h3>
-							<div class="code-example">
-								<pre class="code-block"><code>let name = "太郎";
-if (name == "太郎") {
-    console.log("こんにちは、太郎さん！");
-}</code></pre>
+    console.log("合格です！");}</code></pre>
+								</div>
 							</div>
 						</div>
 
-						<div class="comparison-card">
-							<h3>!=（等しくない）</h3>
-							<div class="code-example">
-								<pre class="code-block"><code>let weather = "雨";
-if (weather != "晴れ") {
-    console.log("傘を持って行きましょう");
-}</code></pre>
+						<!-- 課題 -->
+						<div class="content-section">
+							<h2 class="content-section__title">💡 課題</h2>
+							<div class="content-section__body">
+								<div class="challenge-box">
+									<p class="challenge-text">
+										変数<code>age</code>に年齢を代入し、18歳以上なら「成人です」、18歳未満なら「未成年です」と表示するプログラムを作ってください。
+									</p>
+								</div>
 							</div>
 						</div>
 
-						<div class="comparison-card">
-							<h3>&gt;（より大きい）</h3>
-							<div class="code-example">
-								<pre class="code-block"><code>let price = 1000;
-if (price > 500) {
-    console.log("高い商品です");
-}</code></pre>
-							</div>
-						</div>
-
-						<div class="comparison-card">
-							<h3>&lt;（より小さい）</h3>
-							<div class="code-example">
-								<pre class="code-block"><code>let stock = 3;
-if (stock < 5) {
-    console.log("在庫が少なくなっています");
-}</code></pre>
-							</div>
-						</div>
-
-						<div class="comparison-card">
-							<h3>&gt;=（以上）</h3>
-							<div class="code-example">
-								<pre class="code-block"><code>let score = 80;
-if (score >= 80) {
-    console.log("優秀な成績です！");
-}</code></pre>
-							</div>
-						</div>
-
-						<div class="comparison-card">
-							<h3>&lt;=（以下）</h3>
-							<div class="code-example">
-								<pre class="code-block"><code>let speed = 40;
-if (speed <= 50) {
-    console.log("制限速度内です");
-}</code></pre>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="content-section">
-					<h2>if-else文</h2>
-					<div class="info-card">
-						<div class="info-icon">💡</div>
-						<div class="info-content">
-							<h3>条件が偽の場合の処理</h3>
-							<p>
-								<code>else</code>を使うと、条件が偽（false）の時の処理も書けます。
-							</p>
-						</div>
-					</div>
-
-					<div class="code-example">
-						<div class="code-header">
-							<span class="code-title">if-else文</span>
-							<button class="copy-btn" onclick="copyCode(this)">コピー</button>
-						</div>
-						<pre class="code-block"><code>let score = 65;
-
-if (score >= 70) {
-    console.log("合格です！");
-} else {
-    console.log("不合格です。もう一度頑張りましょう！");
-}
-
-// 年齢による判定
-let age = 16;
+						<!-- 模範解答 -->
+						<div class="content-section">
+							<h2 class="content-section__title">✅ 模範解答</h2>
+							<div class="content-section__body">
+								<div class="code-example">
+									<div class="code-example__header">
+										<span class="code-example__title">JavaScript</span>
+										<button class="code-example__copy" onclick="copyCode(this)">
+											📋 コピー
+										</button>
+									</div>
+									<pre class="code-example__code"><code>let age = 20;
 
 if (age >= 18) {
     console.log("成人です");
 } else {
     console.log("未成年です");
 }</code></pre>
-					</div>
+								</div>
 
-					<div class="interactive-console">
-						<div class="console-header">
-							<span class="console-title">🔧 if-else文を試そう</span>
-							<button class="run-btn" onclick="runIfElseCode()">実行</button>
-							<button
-								class="clear-btn"
-								onclick="clearConsole('ifElseConsole')"
-							>
-								クリア
-							</button>
-						</div>
-						<div class="console-input">
-							<textarea
-								id="ifElseInput"
-								placeholder="if-else文を書いてみましょう..."
-							>
-let time = 14; // 24時間表記
+								<div class="explanation-box">
+									<h3 class="explanation-box__title">📝 解説</h3>
+									<p class="explanation-text">
+										<code>if-else</code
+										>文を使うことで、条件によって異なる処理を実行できます。
+									</p>
+								</div>
 
-if (time < 12) {
-    console.log("おはようございます！");
-} else {
-    console.log("こんにちは！");
-}
-
-// 別の例：偶数・奇数の判定
-let number = 7;
-
-if (number % 2 == 0) {
-    console.log(number + "は偶数です");
-} else {
-    console.log(number + "は奇数です");
-}</textarea
-							>
-						</div>
-						<div class="console-output" id="ifElseConsole">
-							<div class="output-line">
-								コードを実行すると結果がここに表示されます
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="content-section">
-					<h2>実践的な例</h2>
-					<div class="example-grid">
-						<div class="example-card">
-							<h3>🌡️ 気温による服装アドバイス</h3>
-							<div class="code-example">
-								<pre class="code-block"><code>let temperature = 15;
-
-if (temperature >= 25) {
-    console.log("半袖がおすすめです");
-} else {
-    console.log("長袖を着ましょう");
-}</code></pre>
-							</div>
-						</div>
-
-						<div class="example-card">
-							<h3>🎯 テストの成績判定</h3>
-							<div class="code-example">
-								<pre class="code-block"><code>let testScore = 85;
-
-if (testScore >= 90) {
-    console.log("優秀！");
-} else {
-    console.log("もう少し頑張りましょう");
-}</code></pre>
-							</div>
-						</div>
-
-						<div class="example-card">
-							<h3>🛒 在庫チェック</h3>
-							<div class="code-example">
-								<pre class="code-block"><code>let stock = 2;
-
-if (stock > 0) {
-    console.log("購入できます");
-} else {
-    console.log("在庫切れです");
-}</code></pre>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="content-section">
-					<h2>チャレンジ問題</h2>
-					<div class="challenge-card">
-						<h3>🎯 年齢による料金計算</h3>
-						<p>以下の条件で入場料を計算するプログラムを作ってください：</p>
-						<ul>
-							<li>18歳以上：大人料金 1000円</li>
-							<li>18歳未満：子供料金 500円</li>
-						</ul>
-						<p>
-							変数<code>age</code>に年齢を設定し、適切な料金とメッセージを表示してください。
-						</p>
-
-						<div class="interactive-console">
-							<div class="console-header">
-								<span class="console-title">🎯 チャレンジ実行エリア</span>
-								<button class="run-btn" onclick="runChallengeCode()">
-									実行
-								</button>
-								<button
-									class="clear-btn"
-									onclick="clearConsole('challengeConsole')"
-								>
-									クリア
-								</button>
-							</div>
-							<div class="console-input">
-								<textarea
-									id="challengeInput"
-									placeholder="ここにチャレンジコードを書いてください..."
-								>
-// 年齢を設定してください
-let age = 16;
-
-// ここにif-else文を書いて料金を計算してください
-if (age >= 18) {
-    console.log("大人料金：1000円");
-} else {
-    console.log("子供料金：500円");
-}</textarea
-								>
-							</div>
-							<div class="console-output" id="challengeConsole">
-								<div class="output-line">
-									チャレンジコードを実行すると結果がここに表示されます
+								<div class="interactive-console">
+									<h3 class="interactive-console__title">
+										🖥️ 条件分岐を試そう
+									</h3>
+									<div class="console-simulator">
+										<div class="console-simulator__header">
+											<span class="console-simulator__title"
+												>Conditional Statements</span
+											>
+											<button class="console-clear" onclick="clearConsole()">
+												🗑️ クリア
+											</button>
+										</div>
+										<div class="console-simulator__body">
+											<div class="console-output" id="consoleOutput">
+												<div class="console-line">
+													<span class="console-prompt">&gt;</span>
+													<span class="console-text"
+														>if文を使って条件分岐を試してみましょう</span
+													>
+												</div>
+											</div>
+											<div class="console-input-area">
+												<span class="console-prompt">&gt;</span>
+												<input
+													type="text"
+													class="console-input"
+													id="consoleInput"
+													placeholder="let age = 20; if (age >= 18) { console.log('成人です'); }"
+												/>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
 
-				<div class="navigation-section">
-					<div class="nav-buttons">
-						<a href="page5.html" class="nav-btn prev-btn">
-							<span class="nav-arrow">←</span>
-							<span class="nav-text">
-								<span class="nav-label">前のページ</span>
-								<span class="nav-title">文字列の連結</span>
-							</span>
-						</a>
-						<a href="page7.html" class="nav-btn next-btn">
-							<span class="nav-text">
-								<span class="nav-label">次のページ</span>
-								<span class="nav-title">繰り返し処理</span>
-							</span>
-							<span class="nav-arrow">→</span>
-						</a>
+						<!-- 重要ポイント -->
+						<div class="content-section">
+							<h2 class="content-section__title">⭐ 重要ポイント</h2>
+							<div class="content-section__body">
+								<div class="key-points">
+									<div class="key-point">
+										<div class="key-point__icon">🔀</div>
+										<div class="key-point__content">
+											<h4>条件分岐で処理を制御</h4>
+											<p>if文で条件に応じて処理を変えることができます。</p>
+										</div>
+									</div>
+									<div class="key-point">
+										<div class="key-point__icon">🔍</div>
+										<div class="key-point__content">
+											<h4>比較演算子を活用</h4>
+											<p>==、!=、>、<などで条件を作ります。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- ナビゲーション -->
+						<div class="navigation-section">
+							<div class="navigation-buttons">
+								<a href="page5.html" class="nav-button nav-button--prev">
+									<span class="nav-button__arrow">←</span>
+									<span class="nav-button__text">
+										<span class="nav-button__label">前のページ</span>
+										<span class="nav-button__title">文字列の連結</span>
+									</span>
+								</a>
+								<a href="page7.html" class="nav-button nav-button--next">
+									<span class="nav-button__text">
+										<span class="nav-button__label">次のページ</span>
+										<span class="nav-button__title">繰り返し処理</span>
+									</span>
+									<span class="nav-button__arrow">→</span>
+								</a>
+							</div>
+						</div>
 					</div>
-				</div>
+				</section>
 			</main>
 		</div>
 
 		<script src="../js/script.js"></script>
 		<script>
-			// ページ固有のJavaScript
-			function runIfCode() {
-				const code = document.getElementById("ifInput").value;
-				const console = document.getElementById("ifConsole");
-				runCodeInConsole(code, console);
-			}
-
-			function runIfElseCode() {
-				const code = document.getElementById("ifElseInput").value;
-				const console = document.getElementById("ifElseConsole");
-				runCodeInConsole(code, console);
-			}
-
-			function runChallengeCode() {
-				const code = document.getElementById("challengeInput").value;
-				const console = document.getElementById("challengeConsole");
-				runCodeInConsole(code, console);
-			}
-
 			// ページ読み込み時の処理
 			document.addEventListener("DOMContentLoaded", function () {
-				// script.jsの関数が利用可能になるまで待機
-				if (
-					typeof updateProgress === "function" &&
-					typeof highlightCurrentPage === "function"
-				) {
+				if (typeof updateProgress === "function") {
 					updateProgress("week1", 6);
+				}
+				if (typeof highlightCurrentPage === "function") {
 					highlightCurrentPage();
-				} else {
-					// 関数が利用可能になるまで少し待つ
-					setTimeout(function () {
-						if (typeof updateProgress === "function") {
-							updateProgress("week1", 6);
-						}
-						if (typeof highlightCurrentPage === "function") {
-							highlightCurrentPage();
-						}
-					}, 100);
 				}
 			});
 		</script>
