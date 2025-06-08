@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Page 5: 文字列の連結 | JavaScript超入門</title>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="nav-container">
+				<div class="nav-brand">
+					<a href="../index.html">JavaScript超入門</a>
+				</div>
+				<div class="nav-menu">
+					<a href="../index.html" class="nav-link">ホーム</a>
+					<a href="index.html" class="nav-link">Week 1</a>
+					<a href="../week2/index.html" class="nav-link">Week 2</a>
+					<a href="../week3/index.html" class="nav-link">Week 3</a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="sidebar">
+				<div class="week-progress">
+					<h3>Week 1 進捗</h3>
+					<div class="progress-list">
+						<a href="page1.html" class="progress-item completed">
+							<span class="progress-number">1</span>
+							<span class="progress-title">JavaScriptとは</span>
+						</a>
+						<a href="page2.html" class="progress-item completed">
+							<span class="progress-number">2</span>
+							<span class="progress-title">console.log()</span>
+						</a>
+						<a href="page3.html" class="progress-item completed">
+							<span class="progress-number">3</span>
+							<span class="progress-title">四則演算</span>
+						</a>
+						<a href="page4.html" class="progress-item completed">
+							<span class="progress-number">4</span>
+							<span class="progress-title">変数</span>
+						</a>
+						<a href="page5.html" class="progress-item current">
+							<span class="progress-number">5</span>
+							<span class="progress-title">文字列の連結</span>
+						</a>
+						<a href="page6.html" class="progress-item">
+							<span class="progress-number">6</span>
+							<span class="progress-title">条件分岐</span>
+						</a>
+						<a href="page7.html" class="progress-item">
+							<span class="progress-number">7</span>
+							<span class="progress-title">繰り返し処理</span>
+						</a>
+						<a href="page8.html" class="progress-item">
+							<span class="progress-number">8</span>
+							<span class="progress-title">復習とチャレンジ</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<main class="main-content">
+				<div class="breadcrumb">
+					<a href="../index.html">ホーム</a> > <a href="index.html">Week 1</a> >
+					<span>Page 5: 文字列の連結</span>
+				</div>
+
+				<div class="page-header">
+					<div class="page-number">Page 5</div>
+					<h1 class="page-title">文字列の連結</h1>
+					<p class="page-subtitle">
+						文字列を組み合わせて新しい文字列を作る方法を学びます
+					</p>
+				</div>
+
+				<div class="content-section">
+					<h2>文字列の連結とは？</h2>
+					<div class="concept-card">
+						<div class="concept-visual">
+							<div class="string-demo">
+								<div class="string-part">"Hello"</div>
+								<div class="plus-sign">+</div>
+								<div class="string-part">" World"</div>
+								<div class="equals-sign">=</div>
+								<div class="string-result">"Hello World"</div>
+							</div>
+						</div>
+						<div class="concept-text">
+							<p>
+								文字列の連結とは、複数の文字列を繋げて一つの文字列にすることです。JavaScriptでは<code>+</code>演算子を使って文字列を連結できます。
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-section">
+					<h2>基本的な文字列連結</h2>
+					<div class="code-example">
+						<div class="code-header">
+							<span class="code-title">基本の連結</span>
+							<button class="copy-btn" onclick="copyCode(this)">コピー</button>
+						</div>
+						<pre class="code-block"><code>let firstName = "太郎";
+let lastName = "田中";
+let fullName = lastName + firstName;
+console.log(fullName); // "田中太郎"
+
+// スペースを入れる場合
+let fullNameWithSpace = lastName + " " + firstName;
+console.log(fullNameWithSpace); // "田中 太郎"</code></pre>
+					</div>
+
+					<div class="interactive-console">
+						<div class="console-header">
+							<span class="console-title">🔧 実際に試してみよう</span>
+							<button class="run-btn" onclick="runStringConcatCode()">
+								実行
+							</button>
+							<button
+								class="clear-btn"
+								onclick="clearConsole('stringConcatConsole')"
+							>
+								クリア
+							</button>
+						</div>
+						<div class="console-input">
+							<textarea
+								id="stringConcatInput"
+								placeholder="ここにコードを入力してください..."
+							>
+let greeting = "こんにちは";
+let name = "世界";
+let message = greeting + "、" + name + "！";
+console.log(message);</textarea
+							>
+						</div>
+						<div class="console-output" id="stringConcatConsole">
+							<div class="output-line">
+								コードを実行すると結果がここに表示されます
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-section">
+					<h2>テンプレートリテラル（ES6）</h2>
+					<div class="info-card">
+						<div class="info-icon">💡</div>
+						<div class="info-content">
+							<h3>より便利な文字列連結</h3>
+							<p>
+								バッククォート（`）を使うテンプレートリテラルなら、<code>${}</code>の中に変数を書くだけで簡単に文字列を作れます。
+							</p>
+						</div>
+					</div>
+
+					<div class="code-example">
+						<div class="code-header">
+							<span class="code-title">テンプレートリテラル</span>
+							<button class="copy-btn" onclick="copyCode(this)">コピー</button>
+						</div>
+						<pre class="code-block"><code>let name = "太郎";
+let age = 20;
+
+// 従来の方法
+let message1 = "私の名前は" + name + "で、" + age + "歳です。";
+
+// テンプレートリテラル（推奨）
+let message2 = `私の名前は${name}で、${age}歳です。`;
+
+console.log(message1); // "私の名前は太郎で、20歳です。"
+console.log(message2); // "私の名前は太郎で、20歳です。"</code></pre>
+					</div>
+
+					<div class="interactive-console">
+						<div class="console-header">
+							<span class="console-title">🔧 テンプレートリテラルを試そう</span>
+							<button class="run-btn" onclick="runTemplateCode()">実行</button>
+							<button
+								class="clear-btn"
+								onclick="clearConsole('templateConsole')"
+							>
+								クリア
+							</button>
+						</div>
+						<div class="console-input">
+							<textarea
+								id="templateInput"
+								placeholder="テンプレートリテラルを使ってみましょう..."
+							>
+let product = "りんご";
+let price = 150;
+let quantity = 3;
+
+let receipt = `商品: ${product}
+単価: ${price}円
+数量: ${quantity}個
+合計: ${price * quantity}円`;
+
+console.log(receipt);</textarea
+							>
+						</div>
+						<div class="console-output" id="templateConsole">
+							<div class="output-line">
+								コードを実行すると結果がここに表示されます
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-section">
+					<h2>実践的な例</h2>
+					<div class="example-grid">
+						<div class="example-card">
+							<h3>🏷️ 商品タグ作成</h3>
+							<div class="code-example">
+								<pre class="code-block"><code>let productName = "ノートPC";
+let brand = "Tech社";
+let model = "Pro2024";
+
+let tag = `${brand} ${productName} ${model}`;
+console.log(tag); // "Tech社 ノートPC Pro2024"</code></pre>
+							</div>
+						</div>
+
+						<div class="example-card">
+							<h3>📧 メール件名作成</h3>
+							<div class="code-example">
+								<pre class="code-block"><code>let customerName = "田中様";
+let orderNumber = "ORD-001";
+
+let subject = `【重要】${customerName}のご注文${orderNumber}について`;
+console.log(subject);</code></pre>
+							</div>
+						</div>
+
+						<div class="example-card">
+							<h3>🌐 URL作成</h3>
+							<div class="code-example">
+								<pre
+									class="code-block"
+								><code>let baseUrl = "https://api.example.com";
+let endpoint = "users";
+let userId = 123;
+
+let fullUrl = `${baseUrl}/${endpoint}/${userId}`;
+console.log(fullUrl);</code></pre>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-section">
+					<h2>よくある間違い</h2>
+					<div class="mistake-examples">
+						<div class="mistake-card">
+							<div class="mistake-header">❌ 間違い</div>
+							<div class="code-example">
+								<pre class="code-block"><code>let num1 = "5";
+let num2 = "3";
+let result = num1 + num2;
+console.log(result); // "53" (文字列として連結される)</code></pre>
+							</div>
+						</div>
+
+						<div class="mistake-card">
+							<div class="mistake-header">✅ 正しい</div>
+							<div class="code-example">
+								<pre class="code-block"><code>let num1 = 5;  // 数値
+let num2 = 3;  // 数値
+let result = num1 + num2;
+console.log(result); // 8 (数値として計算される)</code></pre>
+							</div>
+						</div>
+					</div>
+
+					<div class="warning-card">
+						<div class="warning-icon">⚠️</div>
+						<div class="warning-content">
+							<h3>注意点</h3>
+							<p>
+								文字列と数値を<code>+</code>で結合すると、数値も文字列として扱われます。計算したい場合は、両方とも数値型にしましょう。
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-section">
+					<h2>チャレンジ問題</h2>
+					<div class="challenge-card">
+						<h3>🎯 自己紹介文を作ろう</h3>
+						<p>以下の変数を使って、自己紹介文を作成してください：</p>
+						<ul>
+							<li>name: あなたの名前</li>
+							<li>hobby: 趣味</li>
+							<li>favoriteFood: 好きな食べ物</li>
+						</ul>
+						<p>
+							テンプレートリテラルを使って「はじめまして、○○です。趣味は○○で、好きな食べ物は○○です。」という文を作ってみましょう。
+						</p>
+
+						<div class="interactive-console">
+							<div class="console-header">
+								<span class="console-title">🎯 チャレンジ実行エリア</span>
+								<button class="run-btn" onclick="runChallengeCode()">
+									実行
+								</button>
+								<button
+									class="clear-btn"
+									onclick="clearConsole('challengeConsole')"
+								>
+									クリア
+								</button>
+							</div>
+							<div class="console-input">
+								<textarea
+									id="challengeInput"
+									placeholder="ここにチャレンジコードを書いてください..."
+								>
+// ここに変数を定義して自己紹介文を作ってみましょう
+let name = "";
+let hobby = "";
+let favoriteFood = "";
+
+// テンプレートリテラルを使って自己紹介文を作成
+let introduction = ``;
+
+console.log(introduction);</textarea
+								>
+							</div>
+							<div class="console-output" id="challengeConsole">
+								<div class="output-line">
+									チャレンジコードを実行すると結果がここに表示されます
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="navigation-section">
+					<div class="nav-buttons">
+						<a href="page4.html" class="nav-btn prev-btn">
+							<span class="nav-arrow">←</span>
+							<span class="nav-text">
+								<span class="nav-label">前のページ</span>
+								<span class="nav-title">変数</span>
+							</span>
+						</a>
+						<a href="page6.html" class="nav-btn next-btn">
+							<span class="nav-text">
+								<span class="nav-label">次のページ</span>
+								<span class="nav-title">条件分岐</span>
+							</span>
+							<span class="nav-arrow">→</span>
+						</a>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<script src="../js/script.js"></script>
+		<script>
+			// ページ固有のJavaScript
+			function runStringConcatCode() {
+				const code = document.getElementById("stringConcatInput").value;
+				const console = document.getElementById("stringConcatConsole");
+				runCodeInConsole(code, console);
+			}
+
+			function runTemplateCode() {
+				const code = document.getElementById("templateInput").value;
+				const console = document.getElementById("templateConsole");
+				runCodeInConsole(code, console);
+			}
+
+			function runChallengeCode() {
+				const code = document.getElementById("challengeInput").value;
+				const console = document.getElementById("challengeConsole");
+				runCodeInConsole(code, console);
+			}
+
+			// ページ読み込み時の処理
+			document.addEventListener("DOMContentLoaded", function () {
+				updateProgress("week1", 5);
+				highlightCurrentPage();
+			});
+		</script>
+	</body>
+</html>
