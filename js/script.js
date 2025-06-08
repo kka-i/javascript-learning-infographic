@@ -498,11 +498,11 @@ function animateCourseCards() {
  * コードハイライトの設定
  */
 function setupCodeHighlighting() {
-	const codeBlocks = document.querySelectorAll("pre code");
-	codeBlocks.forEach((block) => {
-		// 簡単なシンタックスハイライト
-		highlightJavaScript(block);
-	});
+        const codeBlocks = document.querySelectorAll("code");
+        codeBlocks.forEach((block) => {
+                // 簡単なシンタックスハイライト
+                highlightJavaScript(block);
+        });
 }
 
 /**
