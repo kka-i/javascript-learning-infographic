@@ -1306,6 +1306,12 @@ code .comment {
     font-style: italic;
 }
 
+/* syntax parts highlighting */
+.syntax-part__keyword {
+    color: #d35400;
+    font-weight: bold;
+}
+
 /* 強調表示 */
 strong {
     font-weight: bold;

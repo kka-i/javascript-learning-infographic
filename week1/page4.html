@@ -454,6 +454,10 @@ console.log(count); // 5</code></pre>
             solutionDiv.className = 'solution-display';
             solutionDiv.innerHTML = `<pre><code>${solution}</code></pre>`;
             button.parentElement.appendChild(solutionDiv);
+            const codeBlock = solutionDiv.querySelector('code');
+            if (codeBlock && typeof highlightJavaScript === 'function') {
+                highlightJavaScript(codeBlock);
+            }
             button.style.display = 'none';
         }
 
