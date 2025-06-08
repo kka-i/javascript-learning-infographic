@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページ1：JavaScriptってなに？ | 第1週目 JavaScript超入門</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page">
+        <!-- ヘッダー -->
+        <header class="header">
+            <div class="header__container">
+                <div class="header__nav">
+                    <a href="../index.html" class="header__home">🏠 ホーム</a>
+                    <div class="header__breadcrumb">
+                        <a href="index.html" class="breadcrumb__item">第1週目</a>
+                        <span class="breadcrumb__separator">></span>
+                        <span class="breadcrumb__item breadcrumb__item--current">ページ1</span>
+                    </div>
+                </div>
+                <h1 class="header__title">
+                    <span class="header__icon">📘</span>
+                    ページ1：JavaScriptってなに？
+                </h1>
+                <p class="header__subtitle">プログラミングの世界への第一歩</p>
+            </div>
+        </header>
+
+        <!-- 進捗バー -->
+        <div class="progress-bar">
+            <div class="progress-bar__container">
+                <div class="progress-bar__track">
+                    <div class="progress-bar__fill progress-bar__fill--week1" style="width: 12.5%"></div>
+                </div>
+                <span class="progress-bar__text">進捗: 12.5% (1/8ページ)</span>
+            </div>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <main class="main">
+            <!-- 学習内容 -->
+            <section class="content">
+                <div class="content__container">
+                    <!-- 詳細解説 -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">🌟 詳細解説</h2>
+                        <div class="content-section__body">
+                            <p class="content-text">
+                                JavaScript は、ウェブブラウザの中で動くプログラミング言語です。
+                                ホームページを動的にしたり、ユーザーの操作に反応したりすることができます。
+                            </p>
+
+                            <div class="info-box info-box--primary">
+                                <h3 class="info-box__title">📍 JavaScript が動く場所</h3>
+                                <ul class="info-box__list">
+                                    <li>ブラウザのコンソール（開発者ツール）</li>
+                                    <li>HTML ファイルの中（&lt;script&gt;タグ内）</li>
+                                    <li>外部の JavaScript ファイル（.js）</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-box info-box--secondary">
+                                <h3 class="info-box__title">🛠️ 開発者ツールの開き方</h3>
+                                <ul class="info-box__list">
+                                    <li><strong>Windows/Linux：</strong>F12 キーまたは Ctrl+Shift+I</li>
+                                    <li><strong>Mac：</strong>Cmd+Option+I</li>
+                                    <li><strong>右クリック：</strong>「検証」→「Console」タブをクリック</li>
+                                </ul>
+                            </div>
+
+                            <div class="visual-demo">
+                                <h3 class="visual-demo__title">👀 実際に見てみよう</h3>
+                                <div class="demo-steps">
+                                    <div class="demo-step">
+                                        <div class="demo-step__number">1</div>
+                                        <div class="demo-step__content">
+                                            <h4>開発者ツールを開く</h4>
+                                            <p>F12キーを押すか、右クリック→「検証」を選択</p>
+                                        </div>
+                                    </div>
+                                    <div class="demo-step">
+                                        <div class="demo-step__number">2</div>
+                                        <div class="demo-step__content">
+                                            <h4>Consoleタブを選択</h4>
+                                            <p>開発者ツールの上部にある「Console」タブをクリック</p>
+                                        </div>
+                                    </div>
+                                    <div class="demo-step">
+                                        <div class="demo-step__number">3</div>
+                                        <div class="demo-step__content">
+                                            <h4>コードを入力</h4>
+                                            <p>コンソールに直接JavaScriptコードを入力できます</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 課題 -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">💡 課題</h2>
+                        <div class="content-section__body">
+                            <div class="challenge-box">
+                                <p class="challenge-text">
+                                    コンソールに <code>2 + 3</code> を入力し、結果が表示されることを確かめよう
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 模範解答 -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">✅ 模範解答</h2>
+                        <div class="content-section__body">
+                            <div class="code-example">
+                                <div class="code-example__header">
+                                    <span class="code-example__title">JavaScript</span>
+                                    <button class="code-example__copy" onclick="copyCode(this)">📋 コピー</button>
+                                </div>
+                                <pre class="code-example__code"><code>2 + 3;
+// 結果：5 が表示される</code></pre>
+                            </div>
+
+                            <div class="explanation-box">
+                                <h3 class="explanation-box__title">📝 解説</h3>
+                                <p class="explanation-text">
+                                    コンソールに数式を入力して Enter を押すと、JavaScript が計算して結果を返してくれます。
+                                    これがプログラミングの基本的な動作です。
+                                </p>
+                            </div>
+
+                            <!-- 実行可能なコンソール -->
+                            <div class="interactive-console">
+                                <h3 class="interactive-console__title">🖥️ 実際に試してみよう</h3>
+                                <div class="console-simulator">
+                                    <div class="console-simulator__header">
+                                        <span class="console-simulator__title">JavaScript Console</span>
+                                    </div>
+                                    <div class="console-simulator__body">
+                                        <div class="console-output" id="consoleOutput">
+                                            <div class="console-line">
+                                                <span class="console-prompt">&gt;</span>
+                                                <span class="console-text">ここにコードを入力してEnterを押してください</span>
+                                            </div>
+                                        </div>
+                                        <div class="console-input-area">
+                                            <span class="console-prompt">&gt;</span>
+                                            <input type="text" class="console-input" id="consoleInput" placeholder="2 + 3 を入力してみよう">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 追加の例 -->
+                            <div class="additional-examples">
+                                <h3 class="additional-examples__title">🔍 他にも試してみよう</h3>
+                                <div class="example-grid">
+                                    <div class="example-item">
+                                        <code class="example-code">5 + 7</code>
+                                        <span class="example-result">→ 12</span>
+                                    </div>
+                                    <div class="example-item">
+                                        <code class="example-code">10 - 4</code>
+                                        <span class="example-result">→ 6</span>
+                                    </div>
+                                    <div class="example-item">
+                                        <code class="example-code">3 * 4</code>
+                                        <span class="example-result">→ 12</span>
+                                    </div>
+                                    <div class="example-item">
+                                        <code class="example-code">15 / 3</code>
+                                        <span class="example-result">→ 5</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 重要ポイント -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">⭐ 重要ポイント</h2>
+                        <div class="content-section__body">
+                            <div class="key-points">
+                                <div class="key-point">
+                                    <div class="key-point__icon">🎯</div>
+                                    <div class="key-point__content">
+                                        <h4>JavaScriptはブラウザで動く</h4>
+                                        <p>特別なソフトウェアをインストールしなくても、ブラウザがあれば今すぐ始められます。</p>
+                                    </div>
+                                </div>
+                                <div class="key-point">
+                                    <div class="key-point__icon">🔧</div>
+                                    <div class="key-point__content">
+                                        <h4>開発者ツールが学習の友</h4>
+                                        <p>コンソールを使うことで、コードの動作を即座に確認できます。</p>
+                                    </div>
+                                </div>
+                                <div class="key-point">
+                                    <div class="key-point__icon">📊</div>
+                                    <div class="key-point__content">
+                                        <h4>計算から始めよう</h4>
+                                        <p>まずは簡単な計算から始めて、JavaScriptの動作を体感しましょう。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ナビゲーション -->
+            <section class="navigation">
+                <div class="navigation__container">
+                    <div class="navigation__buttons">
+                        <a href="index.html" class="navigation__button navigation__button--back">
+                            ← 第1週目目次
+                        </a>
+                        <a href="page2.html" class="navigation__button navigation__button--next">
+                            次のページ：「こんにちは」を表示しよう →
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- サイドバー -->
+        <aside class="sidebar">
+            <div class="sidebar__container">
+                <h3 class="sidebar__title">📋 第1週目 目次</h3>
+                <nav class="sidebar__nav">
+                    <a href="page1.html" class="sidebar__link sidebar__link--current">
+                        <span class="sidebar__number">1</span>
+                        JavaScriptってなに？
+                    </a>
+                    <a href="page2.html" class="sidebar__link">
+                        <span class="sidebar__number">2</span>
+                        「こんにちは」を表示しよう
+                    </a>
+                    <a href="page3.html" class="sidebar__link">
+                        <span class="sidebar__number">3</span>
+                        計算してみよう
+                    </a>
+                    <a href="page4.html" class="sidebar__link">
+                        <span class="sidebar__number">4</span>
+                        変数に入れてみよう
+                    </a>
+                    <a href="page5.html" class="sidebar__link">
+                        <span class="sidebar__number">5</span>
+                        文字列をつなげよう
+                    </a>
+                    <a href="page6.html" class="sidebar__link">
+                        <span class="sidebar__number">6</span>
+                        条件で分けよう
+                    </a>
+                    <a href="page7.html" class="sidebar__link">
+                        <span class="sidebar__number">7</span>
+                        くり返してみよう
+                    </a>
+                    <a href="page8.html" class="sidebar__link">
+                        <span class="sidebar__number">8</span>
+                        ふりかえり＆チャレンジ課題
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- フッター -->
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__text">
+                    ページ1：JavaScriptってなに？ | 第1週目 JavaScript超入門
+                </p>
+                <div class="footer__links">
+                    <a href="../index.html" class="footer__link">ホーム</a>
+                    <a href="index.html" class="footer__link">第1週目目次</a>
+                    <a href="page2.html" class="footer__link">次のページ</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // ページ固有のJavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // コンソールシミュレーター
+            const consoleInput = document.getElementById('consoleInput');
+            const consoleOutput = document.getElementById('consoleOutput');
+
+            consoleInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    const input = this.value.trim();
+                    if (input) {
+                        executeCode(input);
+                        this.value = '';
+                    }
+                }
+            });
+
+            function executeCode(code) {
+                // 入力を表示
+                const inputLine = document.createElement('div');
+                inputLine.className = 'console-line';
+                inputLine.innerHTML = `<span class="console-prompt">&gt;</span><span class="console-input-text">${code}</span>`;
+                consoleOutput.appendChild(inputLine);
+
+                // 結果を計算して表示
+                try {
+                    const result = eval(code);
+                    const outputLine = document.createElement('div');
+                    outputLine.className = 'console-line console-line--output';
+                    outputLine.innerHTML = `<span class="console-result">${result}</span>`;
+                    consoleOutput.appendChild(outputLine);
+                } catch (error) {
+                    const errorLine = document.createElement('div');
+                    errorLine.className = 'console-line console-line--error';
+                    errorLine.innerHTML = `<span class="console-error">エラー: ${error.message}</span>`;
+                    consoleOutput.appendChild(errorLine);
+                }
+
+                // スクロールを最下部に
+                consoleOutput.scrollTop = consoleOutput.scrollHeight;
+            }
+        });
+
+        // コードコピー機能
+        function copyCode(button) {
+            const codeBlock = button.parentElement.nextElementSibling.textContent;
+            navigator.clipboard.writeText(codeBlock).then(() => {
+                button.textContent = '✅ コピー完了';
+                setTimeout(() => {
+                    button.textContent = '📋 コピー';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
