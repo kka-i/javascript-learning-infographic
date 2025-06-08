@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページ3：計算してみよう | 第1週目 JavaScript超入門</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page">
+        <!-- ヘッダー -->
+        <header class="header">
+            <div class="header__container">
+                <div class="header__nav">
+                    <a href="../index.html" class="header__home">🏠 ホーム</a>
+                    <div class="header__breadcrumb">
+                        <a href="index.html" class="breadcrumb__item">第1週目</a>
+                        <span class="breadcrumb__separator">></span>
+                        <span class="breadcrumb__item breadcrumb__item--current">ページ3</span>
+                    </div>
+                </div>
+                <h1 class="header__title">
+                    <span class="header__icon">📘</span>
+                    ページ3：計算してみよう
+                </h1>
+                <p class="header__subtitle">四則演算でJavaScriptの計算機能を体験</p>
+            </div>
+        </header>
+
+        <!-- 進捗バー -->
+        <div class="progress-bar">
+            <div class="progress-bar__container">
+                <div class="progress-bar__track">
+                    <div class="progress-bar__fill progress-bar__fill--week1" style="width: 37.5%"></div>
+                </div>
+                <span class="progress-bar__text">進捗: 37.5% (3/8ページ)</span>
+            </div>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <main class="main">
+            <!-- 学習内容 -->
+            <section class="content">
+                <div class="content__container">
+                    <!-- 詳細解説 -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">🌟 詳細解説</h2>
+                        <div class="content-section__body">
+                            <p class="content-text">
+                                JavaScript では数学の計算ができます。基本的な演算子は以下の通りです：
+                            </p>
+
+                            <div class="operator-table">
+                                <h3 class="operator-table__title">🧮 四則演算の演算子</h3>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>演算子</th>
+                                            <th>意味</th>
+                                            <th>例</th>
+                                            <th>結果</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>+</code></td>
+                                            <td>足し算</td>
+                                            <td><code>5 + 3</code></td>
+                                            <td>8</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>-</code></td>
+                                            <td>引き算</td>
+                                            <td><code>10 - 4</code></td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>*</code></td>
+                                            <td>掛け算</td>
+                                            <td><code>6 * 7</code></td>
+                                            <td>42</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>/</code></td>
+                                            <td>割り算</td>
+                                            <td><code>15 / 3</code></td>
+                                            <td>5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="info-box info-box--primary">
+                                <h3 class="info-box__title">💡 計算のポイント</h3>
+                                <ul class="info-box__list">
+                                    <li>掛け算は <code>×</code> ではなく <code>*</code> を使います</li>
+                                    <li>割り算は <code>÷</code> ではなく <code>/</code> を使います</li>
+                                    <li>小数点の計算も可能です（例：3.5 + 2.1）</li>
+                                    <li>括弧 <code>()</code> を使って計算順序を指定できます</li>
+                                </ul>
+                            </div>
+
+                            <div class="calculation-examples">
+                                <h3 class="calculation-examples__title">📊 計算例</h3>
+                                <div class="example-grid">
+                                    <div class="example-item" onclick="runCalculation(this)">
+                                        <div class="example-expression">5 + 3</div>
+                                        <div class="example-result">= 8</div>
+                                        <div class="example-description">基本的な足し算</div>
+                                    </div>
+                                    <div class="example-item" onclick="runCalculation(this)">
+                                        <div class="example-expression">20 - 8</div>
+                                        <div class="example-result">= 12</div>
+                                        <div class="example-description">基本的な引き算</div>
+                                    </div>
+                                    <div class="example-item" onclick="runCalculation(this)">
+                                        <div class="example-expression">6 * 4</div>
+                                        <div class="example-result">= 24</div>
+                                        <div class="example-description">基本的な掛け算</div>
+                                    </div>
+                                    <div class="example-item" onclick="runCalculation(this)">
+                                        <div class="example-expression">18 / 3</div>
+                                        <div class="example-result">= 6</div>
+                                        <div class="example-description">基本的な割り算</div>
+                                    </div>
+                                    <div class="example-item" onclick="runCalculation(this)">
+                                        <div class="example-expression">(5 + 3) * 2</div>
+                                        <div class="example-result">= 16</div>
+                                        <div class="example-description">括弧を使った計算</div>
+                                    </div>
+                                    <div class="example-item" onclick="runCalculation(this)">
+                                        <div class="example-expression">3.5 + 2.7</div>
+                                        <div class="example-result">= 6.2</div>
+                                        <div class="example-description">小数点の計算</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 課題 -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">💡 課題</h2>
+                        <div class="content-section__body">
+                            <div class="challenge-box">
+                                <p class="challenge-text">
+                                    好きな四則演算を 3 つ書いて、すべて <code>console.log</code> で結果を確認
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 模範解答 -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">✅ 模範解答</h2>
+                        <div class="content-section__body">
+                            <div class="code-example">
+                                <div class="code-example__header">
+                                    <span class="code-example__title">JavaScript</span>
+                                    <button class="code-example__copy" onclick="copyCode(this)">📋 コピー</button>
+                                </div>
+                                <pre class="code-example__code"><code>console.log(10 + 5); // 結果：15
+console.log(20 - 8); // 結果：12
+console.log(6 * 4);  // 結果：24
+console.log(18 / 3); // 結果：6</code></pre>
+                            </div>
+
+                            <div class="explanation-box">
+                                <h3 class="explanation-box__title">📝 解説</h3>
+                                <p class="explanation-text">
+                                    計算式を <code>console.log()</code> の括弧の中に書くと、計算結果が表示されます。
+                                    <code>//</code> の後はコメント（メモ）で、プログラムの実行には影響しません。
+                                </p>
+                            </div>
+
+                            <!-- 実行可能なコンソール -->
+                            <div class="interactive-console">
+                                <h3 class="interactive-console__title">🖥️ 計算機として使ってみよう</h3>
+                                <div class="console-simulator">
+                                    <div class="console-simulator__header">
+                                        <span class="console-simulator__title">JavaScript Calculator</span>
+                                        <button class="console-clear" onclick="clearConsole()">🗑️ クリア</button>
+                                    </div>
+                                    <div class="console-simulator__body">
+                                        <div class="console-output" id="consoleOutput">
+                                            <div class="console-line">
+                                                <span class="console-prompt">&gt;</span>
+                                                <span class="console-text">計算式を入力してEnterを押してください</span>
+                                            </div>
+                                        </div>
+                                        <div class="console-input-area">
+                                            <span class="console-prompt">&gt;</span>
+                                            <input type="text" class="console-input" id="consoleInput" placeholder="例: 10 + 5">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 計算チャレンジ -->
+                            <div class="calculation-challenge">
+                                <h3 class="calculation-challenge__title">🎯 計算チャレンジ</h3>
+                                <p class="challenge-description">以下の問題を解いてみましょう！</p>
+                                <div class="challenge-problems">
+                                    <div class="challenge-problem">
+                                        <div class="problem-text">問題1: 25 + 17 = ?</div>
+                                        <button class="problem-solve" onclick="solveProblem(this, '25 + 17')">解答を確認</button>
+                                    </div>
+                                    <div class="challenge-problem">
+                                        <div class="problem-text">問題2: 100 - 37 = ?</div>
+                                        <button class="problem-solve" onclick="solveProblem(this, '100 - 37')">解答を確認</button>
+                                    </div>
+                                    <div class="challenge-problem">
+                                        <div class="problem-text">問題3: 8 * 9 = ?</div>
+                                        <button class="problem-solve" onclick="solveProblem(this, '8 * 9')">解答を確認</button>
+                                    </div>
+                                    <div class="challenge-problem">
+                                        <div class="problem-text">問題4: 144 / 12 = ?</div>
+                                        <button class="problem-solve" onclick="solveProblem(this, '144 / 12')">解答を確認</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 重要ポイント -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">⭐ 重要ポイント</h2>
+                        <div class="content-section__body">
+                            <div class="key-points">
+                                <div class="key-point">
+                                    <div class="key-point__icon">🧮</div>
+                                    <div class="key-point__content">
+                                        <h4>JavaScriptは高性能な計算機</h4>
+                                        <p>複雑な数学計算も瞬時に処理できます。</p>
+                                    </div>
+                                </div>
+                                <div class="key-point">
+                                    <div class="key-point__icon">⚡</div>
+                                    <div class="key-point__content">
+                                        <h4>演算子を覚えよう</h4>
+                                        <p>+、-、*、/ の4つの基本演算子をマスターしましょう。</p>
+                                    </div>
+                                </div>
+                                <div class="key-point">
+                                    <div class="key-point__icon">🎯</div>
+                                    <div class="key-point__content">
+                                        <h4>括弧で計算順序を制御</h4>
+                                        <p>複雑な計算では括弧を使って順序を明確にしましょう。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ナビゲーション -->
+            <section class="navigation">
+                <div class="navigation__container">
+                    <div class="navigation__buttons">
+                        <a href="page2.html" class="navigation__button navigation__button--back">
+                            ← 前のページ：「こんにちは」を表示しよう
+                        </a>
+                        <a href="page4.html" class="navigation__button navigation__button--next">
+                            次のページ：変数に入れてみよう →
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- サイドバー -->
+        <aside class="sidebar">
+            <div class="sidebar__container">
+                <h3 class="sidebar__title">📋 第1週目 目次</h3>
+                <nav class="sidebar__nav">
+                    <a href="page1.html" class="sidebar__link">
+                        <span class="sidebar__number">1</span>
+                        JavaScriptってなに？
+                    </a>
+                    <a href="page2.html" class="sidebar__link">
+                        <span class="sidebar__number">2</span>
+                        「こんにちは」を表示しよう
+                    </a>
+                    <a href="page3.html" class="sidebar__link sidebar__link--current">
+                        <span class="sidebar__number">3</span>
+                        計算してみよう
+                    </a>
+                    <a href="page4.html" class="sidebar__link">
+                        <span class="sidebar__number">4</span>
+                        変数に入れてみよう
+                    </a>
+                    <a href="page5.html" class="sidebar__link">
+                        <span class="sidebar__number">5</span>
+                        文字列をつなげよう
+                    </a>
+                    <a href="page6.html" class="sidebar__link">
+                        <span class="sidebar__number">6</span>
+                        条件で分けよう
+                    </a>
+                    <a href="page7.html" class="sidebar__link">
+                        <span class="sidebar__number">7</span>
+                        くり返してみよう
+                    </a>
+                    <a href="page8.html" class="sidebar__link">
+                        <span class="sidebar__number">8</span>
+                        ふりかえり＆チャレンジ課題
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- フッター -->
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__text">
+                    ページ3：計算してみよう | 第1週目 JavaScript超入門
+                </p>
+                <div class="footer__links">
+                    <a href="../index.html" class="footer__link">ホーム</a>
+                    <a href="index.html" class="footer__link">第1週目目次</a>
+                    <a href="page4.html" class="footer__link">次のページ</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // ページ固有のJavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // コンソールシミュレーター
+            const consoleInput = document.getElementById('consoleInput');
+            const consoleOutput = document.getElementById('consoleOutput');
+
+            consoleInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    const input = this.value.trim();
+                    if (input) {
+                        executeCalculation(input);
+                        this.value = '';
+                    }
+                }
+            });
+
+            function executeCalculation(expression) {
+                // 入力を表示
+                const inputLine = document.createElement('div');
+                inputLine.className = 'console-line';
+                inputLine.innerHTML = `<span class="console-prompt">&gt;</span><span class="console-input-text">${expression}</span>`;
+                consoleOutput.appendChild(inputLine);
+
+                // 計算結果を表示
+                try {
+                    const result = eval(expression);
+                    const outputLine = document.createElement('div');
+                    outputLine.className = 'console-line console-line--output';
+                    outputLine.innerHTML = `<span class="console-result">${result}</span>`;
+                    consoleOutput.appendChild(outputLine);
+                } catch (error) {
+                    const errorLine = document.createElement('div');
+                    errorLine.className = 'console-line console-line--error';
+                    errorLine.innerHTML = `<span class="console-error">エラー: 正しい計算式を入力してください</span>`;
+                    consoleOutput.appendChild(errorLine);
+                }
+
+                // スクロールを最下部に
+                consoleOutput.scrollTop = consoleOutput.scrollHeight;
+            }
+        });
+
+        // 計算例の実行
+        function runCalculation(element) {
+            const expression = element.querySelector('.example-expression').textContent;
+            const consoleInput = document.getElementById('consoleInput');
+            consoleInput.value = expression;
+            
+            // Enterキーイベントをシミュレート
+            const event = new KeyboardEvent('keypress', { key: 'Enter' });
+            consoleInput.dispatchEvent(event);
+        }
+
+        // 問題解答機能
+        function solveProblem(button, expression) {
+            const result = eval(expression);
+            button.textContent = `答え: ${result}`;
+            button.style.backgroundColor = '#2ecc71';
+            button.style.color = 'white';
+            button.disabled = true;
+        }
+
+        // コンソールクリア機能
+        function clearConsole() {
+            const consoleOutput = document.getElementById('consoleOutput');
+            consoleOutput.innerHTML = '<div class="console-line"><span class="console-prompt">&gt;</span><span class="console-text">計算機がクリアされました</span></div>';
+        }
+
+        // コードコピー機能
+        function copyCode(button) {
+            const codeBlock = button.parentElement.nextElementSibling.textContent;
+            navigator.clipboard.writeText(codeBlock).then(() => {
+                button.textContent = '✅ コピー完了';
+                setTimeout(() => {
+                    button.textContent = '📋 コピー';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

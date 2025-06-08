@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページ4：変数に入れてみよう | 第1週目 JavaScript超入門</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page">
+        <!-- ヘッダー -->
+        <header class="header">
+            <div class="header__container">
+                <div class="header__nav">
+                    <a href="../index.html" class="header__home">🏠 ホーム</a>
+                    <div class="header__breadcrumb">
+                        <a href="index.html" class="breadcrumb__item">第1週目</a>
+                        <span class="breadcrumb__separator">></span>
+                        <span class="breadcrumb__item breadcrumb__item--current">ページ4</span>
+                    </div>
+                </div>
+                <h1 class="header__title">
+                    <span class="header__icon">📘</span>
+                    ページ4：変数に入れてみよう
+                </h1>
+                <p class="header__subtitle">letキーワードでデータを保存する方法</p>
+            </div>
+        </header>
+
+        <!-- 進捗バー -->
+        <div class="progress-bar">
+            <div class="progress-bar__container">
+                <div class="progress-bar__track">
+                    <div class="progress-bar__fill progress-bar__fill--week1" style="width: 50%"></div>
+                </div>
+                <span class="progress-bar__text">進捗: 50% (4/8ページ)</span>
+            </div>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <main class="main">
+            <!-- 学習内容 -->
+            <section class="content">
+                <div class="content__container">
+                    <!-- 詳細解説 -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">🌟 詳細解説</h2>
+                        <div class="content-section__body">
+                            <p class="content-text">
+                                変数は、データを入れる「箱」のようなものです。一度データを入れておけば、後で何度でも使うことができます。
+                            </p>
+
+                            <div class="variable-concept">
+                                <h3 class="variable-concept__title">📦 変数の概念</h3>
+                                <div class="concept-visual">
+                                    <div class="variable-box">
+                                        <div class="variable-box__label">変数名: age</div>
+                                        <div class="variable-box__content">25</div>
+                                        <div class="variable-box__description">数値を保存</div>
+                                    </div>
+                                    <div class="variable-box">
+                                        <div class="variable-box__label">変数名: name</div>
+                                        <div class="variable-box__content">"たろう"</div>
+                                        <div class="variable-box__description">文字列を保存</div>
+                                    </div>
+                                    <div class="variable-box">
+                                        <div class="variable-box__label">変数名: score</div>
+                                        <div class="variable-box__content">85</div>
+                                        <div class="variable-box__description">点数を保存</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="syntax-explanation">
+                                <h3 class="syntax-explanation__title">📝 変数の作り方</h3>
+                                <div class="code-example">
+                                    <div class="code-example__header">
+                                        <span class="code-example__title">基本構文</span>
+                                    </div>
+                                    <pre class="code-example__code"><code>let 変数名 = 値;</code></pre>
+                                </div>
+                                <div class="syntax-parts">
+                                    <div class="syntax-part">
+                                        <div class="syntax-part__keyword">let</div>
+                                        <div class="syntax-part__description">変数を作るキーワード</div>
+                                    </div>
+                                    <div class="syntax-part">
+                                        <div class="syntax-part__keyword">変数名</div>
+                                        <div class="syntax-part__description">データを識別する名前</div>
+                                    </div>
+                                    <div class="syntax-part">
+                                        <div class="syntax-part__keyword">=</div>
+                                        <div class="syntax-part__description">代入演算子（値を入れる）</div>
+                                    </div>
+                                    <div class="syntax-part">
+                                        <div class="syntax-part__keyword">値</div>
+                                        <div class="syntax-part__description">保存したいデータ</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-box info-box--primary">
+                                <h3 class="info-box__title">📋 命名ルール</h3>
+                                <ul class="info-box__list">
+                                    <li>英数字とアンダースコア（_）が使える</li>
+                                    <li>数字から始めることはできない</li>
+                                    <li>日本語も使えるが、英語がおすすめ</li>
+                                    <li>意味のある名前を付ける（age, name, score など）</li>
+                                </ul>
+                            </div>
+
+                            <div class="variable-examples">
+                                <h3 class="variable-examples__title">💡 変数の例</h3>
+                                <div class="example-grid">
+                                    <div class="example-item" onclick="runVariableExample(this)">
+                                        <div class="example-code">let age = 20;</div>
+                                        <div class="example-description">年齢を保存</div>
+                                    </div>
+                                    <div class="example-item" onclick="runVariableExample(this)">
+                                        <div class="example-code">let name = "花子";</div>
+                                        <div class="example-description">名前を保存</div>
+                                    </div>
+                                    <div class="example-item" onclick="runVariableExample(this)">
+                                        <div class="example-code">let score = 95;</div>
+                                        <div class="example-description">点数を保存</div>
+                                    </div>
+                                    <div class="example-item" onclick="runVariableExample(this)">
+                                        <div class="example-code">let price = 1500;</div>
+                                        <div class="example-description">価格を保存</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 課題 -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">💡 課題</h2>
+                        <div class="content-section__body">
+                            <div class="challenge-box">
+                                <p class="challenge-text">
+                                    変数 <code>age</code> に自分の年齢を代入し、<code>console.log</code> で表示
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 模範解答 -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">✅ 模範解答</h2>
+                        <div class="content-section__body">
+                            <div class="code-example">
+                                <div class="code-example__header">
+                                    <span class="code-example__title">JavaScript</span>
+                                    <button class="code-example__copy" onclick="copyCode(this)">📋 コピー</button>
+                                </div>
+                                <pre class="code-example__code"><code>let age = 25;
+console.log(age); // 結果：25
+
+// 他の例
+let name = "たろう";
+console.log(name); // 結果：たろう
+
+let score = 85;
+console.log(score); // 結果：85</code></pre>
+                            </div>
+
+                            <div class="explanation-box">
+                                <h3 class="explanation-box__title">📝 解説</h3>
+                                <p class="explanation-text">
+                                    <code>let</code>で変数を作り、<code>=</code>で値を代入します。
+                                    変数名を書くと、中身が表示されます。変数を使うことで、同じ値を何度も使い回せます。
+                                </p>
+                            </div>
+
+                            <!-- 実行可能なコンソール -->
+                            <div class="interactive-console">
+                                <h3 class="interactive-console__title">🖥️ 変数を作って使ってみよう</h3>
+                                <div class="console-simulator">
+                                    <div class="console-simulator__header">
+                                        <span class="console-simulator__title">Variable Practice</span>
+                                        <button class="console-clear" onclick="clearConsole()">🗑️ クリア</button>
+                                    </div>
+                                    <div class="console-simulator__body">
+                                        <div class="console-output" id="consoleOutput">
+                                            <div class="console-line">
+                                                <span class="console-prompt">&gt;</span>
+                                                <span class="console-text">変数を作成してみましょう（例: let age = 20;）</span>
+                                            </div>
+                                        </div>
+                                        <div class="console-input-area">
+                                            <span class="console-prompt">&gt;</span>
+                                            <input type="text" class="console-input" id="consoleInput" placeholder="let age = 20;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 変数の活用例 -->
+                            <div class="variable-usage">
+                                <h3 class="variable-usage__title">🔄 変数の活用例</h3>
+                                <div class="usage-examples">
+                                    <div class="usage-example">
+                                        <h4 class="usage-example__title">計算結果を保存</h4>
+                                        <div class="code-example">
+                                            <pre class="code-example__code"><code>let result = 10 + 5;
+console.log(result); // 15</code></pre>
+                                        </div>
+                                    </div>
+                                    <div class="usage-example">
+                                        <h4 class="usage-example__title">変数を使った計算</h4>
+                                        <div class="code-example">
+                                            <pre class="code-example__code"><code>let price = 1000;
+let tax = price * 0.1;
+console.log(tax); // 100</code></pre>
+                                        </div>
+                                    </div>
+                                    <div class="usage-example">
+                                        <h4 class="usage-example__title">変数の値を変更</h4>
+                                        <div class="code-example">
+                                            <pre class="code-example__code"><code>let count = 1;
+console.log(count); // 1
+count = 5;
+console.log(count); // 5</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 変数練習問題 -->
+                            <div class="variable-practice">
+                                <h3 class="variable-practice__title">🎯 変数練習問題</h3>
+                                <div class="practice-problems">
+                                    <div class="practice-problem">
+                                        <div class="problem-text">問題1: 変数 width に 10、height に 5 を代入して、面積を計算してください</div>
+                                        <button class="problem-solve" onclick="showSolution(this, 'let width = 10;\nlet height = 5;\nlet area = width * height;\nconsole.log(area);')">解答例を見る</button>
+                                    </div>
+                                    <div class="practice-problem">
+                                        <div class="problem-text">問題2: 変数 firstName に "太郎"、lastName に "田中" を代入してください</div>
+                                        <button class="problem-solve" onclick="showSolution(this, 'let firstName = \"太郎\";\nlet lastName = \"田中\";\nconsole.log(firstName);\nconsole.log(lastName);')">解答例を見る</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 重要ポイント -->
+                    <div class="content-section">
+                        <h2 class="content-section__title">⭐ 重要ポイント</h2>
+                        <div class="content-section__body">
+                            <div class="key-points">
+                                <div class="key-point">
+                                    <div class="key-point__icon">📦</div>
+                                    <div class="key-point__content">
+                                        <h4>変数はデータの入れ物</h4>
+                                        <p>一度保存すれば、何度でも使い回すことができます。</p>
+                                    </div>
+                                </div>
+                                <div class="key-point">
+                                    <div class="key-point__icon">🏷️</div>
+                                    <div class="key-point__content">
+                                        <h4>わかりやすい名前を付ける</h4>
+                                        <p>age、name、scoreなど、内容がわかる名前にしましょう。</p>
+                                    </div>
+                                </div>
+                                <div class="key-point">
+                                    <div class="key-point__icon">🔄</div>
+                                    <div class="key-point__content">
+                                        <h4>値は後から変更可能</h4>
+                                        <p>letで作った変数は、後から別の値に変更できます。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ナビゲーション -->
+            <section class="navigation">
+                <div class="navigation__container">
+                    <div class="navigation__buttons">
+                        <a href="page3.html" class="navigation__button navigation__button--back">
+                            ← 前のページ：計算してみよう
+                        </a>
+                        <a href="page5.html" class="navigation__button navigation__button--next">
+                            次のページ：文字列をつなげよう →
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- サイドバー -->
+        <aside class="sidebar">
+            <div class="sidebar__container">
+                <h3 class="sidebar__title">📋 第1週目 目次</h3>
+                <nav class="sidebar__nav">
+                    <a href="page1.html" class="sidebar__link">
+                        <span class="sidebar__number">1</span>
+                        JavaScriptってなに？
+                    </a>
+                    <a href="page2.html" class="sidebar__link">
+                        <span class="sidebar__number">2</span>
+                        「こんにちは」を表示しよう
+                    </a>
+                    <a href="page3.html" class="sidebar__link">
+                        <span class="sidebar__number">3</span>
+                        計算してみよう
+                    </a>
+                    <a href="page4.html" class="sidebar__link sidebar__link--current">
+                        <span class="sidebar__number">4</span>
+                        変数に入れてみよう
+                    </a>
+                    <a href="page5.html" class="sidebar__link">
+                        <span class="sidebar__number">5</span>
+                        文字列をつなげよう
+                    </a>
+                    <a href="page6.html" class="sidebar__link">
+                        <span class="sidebar__number">6</span>
+                        条件で分けよう
+                    </a>
+                    <a href="page7.html" class="sidebar__link">
+                        <span class="sidebar__number">7</span>
+                        くり返してみよう
+                    </a>
+                    <a href="page8.html" class="sidebar__link">
+                        <span class="sidebar__number">8</span>
+                        ふりかえり＆チャレンジ課題
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- フッター -->
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__text">
+                    ページ4：変数に入れてみよう | 第1週目 JavaScript超入門
+                </p>
+                <div class="footer__links">
+                    <a href="../index.html" class="footer__link">ホーム</a>
+                    <a href="index.html" class="footer__link">第1週目目次</a>
+                    <a href="page5.html" class="footer__link">次のページ</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // ページ固有のJavaScript
+        let variables = {}; // 変数を保存するオブジェクト
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // コンソールシミュレーター
+            const consoleInput = document.getElementById('consoleInput');
+            const consoleOutput = document.getElementById('consoleOutput');
+
+            consoleInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    const input = this.value.trim();
+                    if (input) {
+                        executeVariableCode(input);
+                        this.value = '';
+                    }
+                }
+            });
+
+            function executeVariableCode(code) {
+                // 入力を表示
+                const inputLine = document.createElement('div');
+                inputLine.className = 'console-line';
+                inputLine.innerHTML = `<span class="console-prompt">&gt;</span><span class="console-input-text">${code}</span>`;
+                consoleOutput.appendChild(inputLine);
+
+                try {
+                    // 変数宣言の処理
+                    if (code.includes('let ')) {
+                        const match = code.match(/let\s+(\w+)\s*=\s*(.+);?/);
+                        if (match) {
+                            const varName = match[1];
+                            const value = eval(match[2]);
+                            variables[varName] = value;
+                            
+                            const outputLine = document.createElement('div');
+                            outputLine.className = 'console-line console-line--success';
+                            outputLine.innerHTML = `<span class="console-success">変数 ${varName} に ${typeof value === 'string' ? '"' + value + '"' : value} を代入しました</span>`;
+                            consoleOutput.appendChild(outputLine);
+                        }
+                    }
+                    // console.logの処理
+                    else if (code.includes('console.log')) {
+                        const match = code.match(/console\.log\s*\(\s*(\w+)\s*\)/);
+                        if (match) {
+                            const varName = match[1];
+                            if (variables.hasOwnProperty(varName)) {
+                                const outputLine = document.createElement('div');
+                                outputLine.className = 'console-line console-line--output';
+                                outputLine.innerHTML = `<span class="console-result">${variables[varName]}</span>`;
+                                consoleOutput.appendChild(outputLine);
+                            } else {
+                                throw new Error(`変数 ${varName} は定義されていません`);
+                            }
+                        } else {
+                            eval(code);
+                        }
+                    }
+                    // 変数名だけの場合
+                    else if (variables.hasOwnProperty(code)) {
+                        const outputLine = document.createElement('div');
+                        outputLine.className = 'console-line console-line--output';
+                        outputLine.innerHTML = `<span class="console-result">${variables[code]}</span>`;
+                        consoleOutput.appendChild(outputLine);
+                    }
+                    // その他の計算
+                    else {
+                        const result = eval(code);
+                        const outputLine = document.createElement('div');
+                        outputLine.className = 'console-line console-line--output';
+                        outputLine.innerHTML = `<span class="console-result">${result}</span>`;
+                        consoleOutput.appendChild(outputLine);
+                    }
+                } catch (error) {
+                    const errorLine = document.createElement('div');
+                    errorLine.className = 'console-line console-line--error';
+                    errorLine.innerHTML = `<span class="console-error">エラー: ${error.message}</span>`;
+                    consoleOutput.appendChild(errorLine);
+                }
+
+                // スクロールを最下部に
+                consoleOutput.scrollTop = consoleOutput.scrollHeight;
+            }
+        });
+
+        // 変数例の実行
+        function runVariableExample(element) {
+            const code = element.querySelector('.example-code').textContent;
+            const consoleInput = document.getElementById('consoleInput');
+            consoleInput.value = code;
+            
+            // Enterキーイベントをシミュレート
+            const event = new KeyboardEvent('keypress', { key: 'Enter' });
+            consoleInput.dispatchEvent(event);
+        }
+
+        // 解答表示機能
+        function showSolution(button, solution) {
+            const solutionDiv = document.createElement('div');
+            solutionDiv.className = 'solution-display';
+            solutionDiv.innerHTML = `<pre><code>${solution}</code></pre>`;
+            button.parentElement.appendChild(solutionDiv);
+            button.style.display = 'none';
+        }
+
+        // コンソールクリア機能
+        function clearConsole() {
+            const consoleOutput = document.getElementById('consoleOutput');
+            consoleOutput.innerHTML = '<div class="console-line"><span class="console-prompt">&gt;</span><span class="console-text">変数練習コンソールがクリアされました</span></div>';
+            variables = {}; // 変数もクリア
+        }
+
+        // コードコピー機能
+        function copyCode(button) {
+            const codeBlock = button.parentElement.nextElementSibling.textContent;
+            navigator.clipboard.writeText(codeBlock).then(() => {
+                button.textContent = '✅ コピー完了';
+                setTimeout(() => {
+                    button.textContent = '📋 コピー';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
