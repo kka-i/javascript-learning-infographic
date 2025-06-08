@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第2週目：JavaScriptルールと書き方 | JavaScript学習インフォグラフィック</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page">
+        <!-- ヘッダー -->
+        <header class="header">
+            <div class="header__container">
+                <div class="header__nav">
+                    <a href="../index.html" class="header__home">🏠 ホーム</a>
+                    <div class="header__breadcrumb">
+                        <span class="breadcrumb__item">第2週目</span>
+                        <span class="breadcrumb__separator">></span>
+                        <span class="breadcrumb__item breadcrumb__item--current">目次</span>
+                    </div>
+                </div>
+                <h1 class="header__title">
+                    <span class="header__icon">📗</span>
+                    第2週目：JavaScriptルールと書き方
+                </h1>
+                <p class="header__subtitle">データ型や演算子、関数の基本を学ぼう</p>
+            </div>
+        </header>
+
+        <!-- 進捗バー -->
+        <div class="progress-bar">
+            <div class="progress-bar__container">
+                <div class="progress-bar__track">
+                    <div class="progress-bar__fill progress-bar__fill--week2" style="width: 0%"></div>
+                </div>
+                <span class="progress-bar__text">進捗: 0% (0/7ページ)</span>
+            </div>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <main class="main">
+            <!-- 学習目標 -->
+            <section class="learning-objectives">
+                <div class="learning-objectives__container">
+                    <h2 class="learning-objectives__title">🎯 第2週目の学習目標</h2>
+                    <ul class="learning-objectives__list">
+                        <li>主なデータ型(number, string, boolean)を理解する</li>
+                        <li>比較演算子や論理演算子を使って条件分岐できる</li>
+                        <li>for文や関数など基本構文を身につける</li>
+                        <li>constとletの違いを知り、適切に使い分ける</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ページ一覧 -->
+            <section class="page-list">
+                <div class="page-list__container">
+                    <h3 class="page-list__title">📚 学習ページ一覧</h3>
+
+                    <div class="page-cards">
+                        <!-- ページ1 -->
+                        <div class="page-card page-card--week2">
+                            <div class="page-card__header">
+                                <span class="page-card__number">1</span>
+                                <h4 class="page-card__title">数・文字・true/false って？</h4>
+                            </div>
+                            <div class="page-card__content">
+                                <p class="page-card__description">データ型の基本と typeof 演算子を学びます。</p>
+                                <div class="page-card__topics">
+                                    <span class="topic-tag">number</span>
+                                    <span class="topic-tag">string</span>
+                                    <span class="topic-tag">boolean</span>
+                                </div>
+                            </div>
+                            <div class="page-card__footer">
+                                <a href="page1.html" class="page-card__button">学習開始</a>
+                            </div>
+                        </div>
+
+                        <!-- ページ2 -->
+                        <div class="page-card page-card--week2">
+                            <div class="page-card__header">
+                                <span class="page-card__number">2</span>
+                                <h4 class="page-card__title">演算子（比較・論理）</h4>
+                            </div>
+                            <div class="page-card__content">
+                                <p class="page-card__description">== と === の違いや論理演算子を確認します。</p>
+                                <div class="page-card__topics">
+                                    <span class="topic-tag">比較演算子</span>
+                                    <span class="topic-tag">論理演算子</span>
+                                </div>
+                            </div>
+                            <div class="page-card__footer">
+                                <a href="page2.html" class="page-card__button">学習開始</a>
+                            </div>
+                        </div>
+
+                        <!-- ページ3 -->
+                        <div class="page-card page-card--week2">
+                            <div class="page-card__header">
+                                <span class="page-card__number">3</span>
+                                <h4 class="page-card__title">if 文のくわしい使い方</h4>
+                            </div>
+                            <div class="page-card__content">
+                                <p class="page-card__description">else if を使った複数条件の分岐に挑戦します。</p>
+                                <div class="page-card__topics">
+                                    <span class="topic-tag">if文</span>
+                                    <span class="topic-tag">条件分岐</span>
+                                </div>
+                            </div>
+                            <div class="page-card__footer">
+                                <a href="page3.html" class="page-card__button">学習開始</a>
+                            </div>
+                        </div>
+
+                        <!-- ページ4 -->
+                        <div class="page-card page-card--week2">
+                            <div class="page-card__header">
+                                <span class="page-card__number">4</span>
+                                <h4 class="page-card__title">for 文のくわしい使い方</h4>
+                            </div>
+                            <div class="page-card__content">
+                                <p class="page-card__description">カウンター変数を使った繰り返し処理を練習します。</p>
+                                <div class="page-card__topics">
+                                    <span class="topic-tag">for文</span>
+                                    <span class="topic-tag">繰り返し</span>
+                                </div>
+                            </div>
+                            <div class="page-card__footer">
+                                <a href="page4.html" class="page-card__button">学習開始</a>
+                            </div>
+                        </div>
+
+                        <!-- ページ5 -->
+                        <div class="page-card page-card--week2">
+                            <div class="page-card__header">
+                                <span class="page-card__number">5</span>
+                                <h4 class="page-card__title">関数ってなに？（入門編）</h4>
+                            </div>
+                            <div class="page-card__content">
+                                <p class="page-card__description">関数の基本構文と引数・戻り値を学びます。</p>
+                                <div class="page-card__topics">
+                                    <span class="topic-tag">function</span>
+                                    <span class="topic-tag">戻り値</span>
+                                </div>
+                            </div>
+                            <div class="page-card__footer">
+                                <a href="page5.html" class="page-card__button">学習開始</a>
+                            </div>
+                        </div>
+
+                        <!-- ページ6 -->
+                        <div class="page-card page-card--week2">
+                            <div class="page-card__header">
+                                <span class="page-card__number">6</span>
+                                <h4 class="page-card__title">const の紹介と注意点</h4>
+                            </div>
+                            <div class="page-card__content">
+                                <p class="page-card__description">再代入できない定数とletとの違いを理解します。</p>
+                                <div class="page-card__topics">
+                                    <span class="topic-tag">const</span>
+                                    <span class="topic-tag">let</span>
+                                </div>
+                            </div>
+                            <div class="page-card__footer">
+                                <a href="page6.html" class="page-card__button">学習開始</a>
+                            </div>
+                        </div>
+
+                        <!-- ページ7 -->
+                        <div class="page-card page-card--week2">
+                            <div class="page-card__header">
+                                <span class="page-card__number">7</span>
+                                <h4 class="page-card__title">まとめ＆チャレンジ課題</h4>
+                            </div>
+                            <div class="page-card__content">
+                                <p class="page-card__description">第2週目の総まとめとして FizzBuzz に挑戦します。</p>
+                                <div class="page-card__topics">
+                                    <span class="topic-tag">復習</span>
+                                    <span class="topic-tag">チャレンジ</span>
+                                </div>
+                            </div>
+                            <div class="page-card__footer">
+                                <a href="page7.html" class="page-card__button">学習開始</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ナビゲーション -->
+            <section class="navigation">
+                <div class="navigation__container">
+                    <div class="navigation__buttons">
+                        <a href="../index.html" class="navigation__button navigation__button--back">
+                            ← ホームに戻る
+                        </a>
+                        <a href="page1.html" class="navigation__button navigation__button--next">
+                            第1ページを開始 →
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- フッター -->
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__text">
+                    第2週目：JavaScriptルールと書き方 | JavaScript学習インフォグラフィック
+                </p>
+                <div class="footer__links">
+                    <a href="../index.html" class="footer__link">ホーム</a>
+                    <a href="../week1/index.html" class="footer__link">第1週目</a>
+                    <a href="../week3/index.html" class="footer__link">第3週目</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
