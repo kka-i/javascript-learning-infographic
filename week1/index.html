@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第1週目：JavaScript超入門 | JavaScript学習インフォグラフィック</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="page">
+        <!-- ヘッダー -->
+        <header class="header">
+            <div class="header__container">
+                <div class="header__nav">
+                    <a href="../index.html" class="header__home">🏠 ホーム</a>
+                    <div class="header__breadcrumb">
+                        <span class="breadcrumb__item">第1週目</span>
+                        <span class="breadcrumb__separator">></span>
+                        <span class="breadcrumb__item breadcrumb__item--current">目次</span>
+                    </div>
+                </div>
+                <h1 class="header__title">
+                    <span class="header__icon">📘</span>
+                    第1週目：JavaScript超入門
+                </h1>
+                <p class="header__subtitle">まず動かす！超シンプルなJS体験</p>
+            </div>
+        </header>
+
+        <!-- 進捗バー -->
+        <div class="progress-bar">
+            <div class="progress-bar__container">
+                <div class="progress-bar__track">
+                    <div class="progress-bar__fill progress-bar__fill--week1" style="width: 0%"></div>
+                </div>
+                <span class="progress-bar__text">進捗: 0% (0/8ページ)</span>
+            </div>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <main class="main">
+            <!-- 学習目標 -->
+            <section class="learning-objectives">
+                <div class="learning-objectives__container">
+                    <h2 class="learning-objectives__title">🎯 第1週目の学習目標</h2>
+                    <ul class="learning-objectives__list">
+                        <li>JavaScriptがどういうものかを体験する</li>
+                        <li>コンソールで簡単なプログラムを動かせるようになる</li>
+                        <li>基本的な計算、変数、条件分岐、繰り返しの概念を理解する</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ページ一覧 -->
+            <section class="page-list">
+                <div class="page-list__container">
+                    <h3 class="page-list__title">📚 学習ページ一覧</h3>
+                    
+                    <div class="page-cards">
+                        <!-- ページ1 -->
+                        <div class="page-card page-card--week1">
+                            <div class="page-card__header">
+                                <span class="page-card__number">1</span>
+                                <h4 class="page-card__title">JavaScriptってなに？</h4>
+                            </div>
+                            <div class="page-card__content">
+                                <p class="page-card__description">
+                                    JavaScriptの基本概念と開発者ツールの使い方を学びます。
+                                    初めてのプログラム実行を体験しましょう。
+                                </p>
+                                <div class="page-card__topics">
+                                    <span class="topic-tag">基本概念</span>
+                                    <span class="topic-tag">開発者ツール</span>
+                                    <span class="topic-tag">初回実行</span>
+                                </div>
+                            </div>
+                            <div class="page-card__footer">
+                                <a href="page1.html" class="page-card__button">学習開始</a>
+                            </div>
+                        </div>
+
+                        <!-- ページ2 -->
+                        <div class="page-card page-card--week1">
+                            <div class="page-card__header">
+                                <span class="page-card__number">2</span>
+                                <h4 class="page-card__title">「こんにちは」を表示しよう</h4>
+                            </div>
+                            <div class="page-card__content">
+                                <p class="page-card__description">
+                                    console.log()を使って文字列を表示する方法を学習します。
+                                    プログラミングの基本的な出力処理です。
+                                </p>
+                                <div class="page-card__topics">
+                                    <span class="topic-tag">console.log</span>
+                                    <span class="topic-tag">文字列</span>
+                                    <span class="topic-tag">出力</span>
+                                </div>
+                            </div>
+                            <div class="page-card__footer">
+                                <a href="page2.html" class="page-card__button">学習開始</a>
+                            </div>
+                        </div>
+
+                        <!-- ページ3 -->
+                        <div class="page-card page-card--week1">
+                            <div class="page-card__header">
+                                <span class="page-card__number">3</span>
+                                <h4 class="page-card__title">計算してみよう</h4>
+                            </div>
+                            <div class="page-card__content">
+                                <p class="page-card__description">
+                                    四則演算（+、-、*、/）を使った基本的な計算処理を学習します。
+                                    プログラミングでの数値計算の基礎です。
+                                </p>
+                                <div class="page-card__topics">
+                                    <span class="topic-tag">四則演算</span>
+                                    <span class="topic-tag">数値計算</span>
+                                    <span class="topic-tag">演算子</span>
+                                </div>
+                            </div>
+                            <div class="page-card__footer">
+                                <a href="page3.html" class="page-card__button">学習開始</a>
+                            </div>
+                        </div>
+
+                        <!-- ページ4 -->
+                        <div class="page-card page-card--week1">
+                            <div class="page-card__header">
+                                <span class="page-card__number">4</span>
+                                <h4 class="page-card__title">変数に入れてみよう</h4>
+                            </div>
+                            <div class="page-card__content">
+                                <p class="page-card__description">
+                                    letキーワードを使った変数の作成と使用方法を学習します。
+                                    データを保存して再利用する基本的な仕組みです。
+                                </p>
+                                <div class="page-card__topics">
+                                    <span class="topic-tag">変数</span>
+                                    <span class="topic-tag">let</span>
+                                    <span class="topic-tag">データ保存</span>
+                                </div>
+                            </div>
+                            <div class="page-card__footer">
+                                <a href="page4.html" class="page-card__button">学習開始</a>
+                            </div>
+                        </div>
+
+                        <!-- ページ5 -->
+                        <div class="page-card page-card--week1">
+                            <div class="page-card__header">
+                                <span class="page-card__number">5</span>
+                                <h4 class="page-card__title">文字列をつなげよう</h4>
+                            </div>
+                            <div class="page-card__content">
+                                <p class="page-card__description">
+                                    +演算子を使った文字列の連結方法を学習します。
+                                    動的なメッセージ作成の基礎となる重要な技術です。
+                                </p>
+                                <div class="page-card__topics">
+                                    <span class="topic-tag">文字列連結</span>
+                                    <span class="topic-tag">+演算子</span>
+                                    <span class="topic-tag">動的メッセージ</span>
+                                </div>
+                            </div>
+                            <div class="page-card__footer">
+                                <a href="page5.html" class="page-card__button">学習開始</a>
+                            </div>
+                        </div>
+
+                        <!-- ページ6 -->
+                        <div class="page-card page-card--week1">
+                            <div class="page-card__header">
+                                <span class="page-card__number">6</span>
+                                <h4 class="page-card__title">条件で分けよう</h4>
+                            </div>
+                            <div class="page-card__content">
+                                <p class="page-card__description">
+                                    if文を使った条件分岐の基本を学習します。
+                                    プログラムに判断力を持たせる重要な制御構造です。
+                                </p>
+                                <div class="page-card__topics">
+                                    <span class="topic-tag">if文</span>
+                                    <span class="topic-tag">条件分岐</span>
+                                    <span class="topic-tag">比較演算子</span>
+                                </div>
+                            </div>
+                            <div class="page-card__footer">
+                                <a href="page6.html" class="page-card__button">学習開始</a>
+                            </div>
+                        </div>
+
+                        <!-- ページ7 -->
+                        <div class="page-card page-card--week1">
+                            <div class="page-card__header">
+                                <span class="page-card__number">7</span>
+                                <h4 class="page-card__title">くり返してみよう</h4>
+                            </div>
+                            <div class="page-card__content">
+                                <p class="page-card__description">
+                                    for文を使った繰り返し処理の基本を学習します。
+                                    効率的なプログラム作成に欠かせない制御構造です。
+                                </p>
+                                <div class="page-card__topics">
+                                    <span class="topic-tag">for文</span>
+                                    <span class="topic-tag">繰り返し</span>
+                                    <span class="topic-tag">ループ</span>
+                                </div>
+                            </div>
+                            <div class="page-card__footer">
+                                <a href="page7.html" class="page-card__button">学習開始</a>
+                            </div>
+                        </div>
+
+                        <!-- ページ8 -->
+                        <div class="page-card page-card--week1">
+                            <div class="page-card__header">
+                                <span class="page-card__number">8</span>
+                                <h4 class="page-card__title">ふりかえり＆チャレンジ課題</h4>
+                            </div>
+                            <div class="page-card__content">
+                                <p class="page-card__description">
+                                    第1週目の学習内容を振り返り、総合的なチャレンジ課題に取り組みます。
+                                    九九表作成で学習成果を確認しましょう。
+                                </p>
+                                <div class="page-card__topics">
+                                    <span class="topic-tag">振り返り</span>
+                                    <span class="topic-tag">チャレンジ課題</span>
+                                    <span class="topic-tag">九九表</span>
+                                </div>
+                            </div>
+                            <div class="page-card__footer">
+                                <a href="page8.html" class="page-card__button">学習開始</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 学習ガイド -->
+            <section class="learning-guide">
+                <div class="learning-guide__container">
+                    <h3 class="learning-guide__title">📋 第1週目学習ガイド</h3>
+                    
+                    <div class="guide-sections">
+                        <div class="guide-section">
+                            <h4 class="guide-section__title">🎯 学習のポイント</h4>
+                            <ul class="guide-section__list">
+                                <li>実際にコンソールでコードを実行してみることが重要です</li>
+                                <li>エラーが出ても慌てず、メッセージを読んで理解しましょう</li>
+                                <li>各ページの課題は必ず自分で試してみてください</li>
+                                <li>理解できない部分は前のページに戻って復習しましょう</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-section">
+                            <h4 class="guide-section__title">⏰ 推奨学習時間</h4>
+                            <ul class="guide-section__list">
+                                <li>各ページ：15-20分程度</li>
+                                <li>課題実践：10-15分程度</li>
+                                <li>チャレンジ課題：30-45分程度</li>
+                                <li>総学習時間：2-3時間程度</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-section">
+                            <h4 class="guide-section__title">🛠️ 準備するもの</h4>
+                            <ul class="guide-section__list">
+                                <li>ウェブブラウザ（Chrome、Firefox、Safari等）</li>
+                                <li>開発者ツール（F12キーまたはCmd+Option+I）</li>
+                                <li>メモ帳やテキストエディタ（任意）</li>
+                                <li>学習ノート（手書きまたはデジタル）</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ナビゲーション -->
+            <section class="navigation">
+                <div class="navigation__container">
+                    <div class="navigation__buttons">
+                        <a href="../index.html" class="navigation__button navigation__button--back">
+                            ← ホームに戻る
+                        </a>
+                        <a href="page1.html" class="navigation__button navigation__button--next">
+                            第1ページを開始 →
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- フッター -->
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__text">
+                    第1週目：JavaScript超入門 | JavaScript学習インフォグラフィック
+                </p>
+                <div class="footer__links">
+                    <a href="../index.html" class="footer__link">ホーム</a>
+                    <a href="../week2/index.html" class="footer__link">第2週目</a>
+                    <a href="../week3/index.html" class="footer__link">第3週目</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
