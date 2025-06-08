@@ -607,10 +607,62 @@ function showTooltip(e) {
  * ツールチップの非表示
  */
 function hideTooltip(e) {
-	if (e.target._tooltip) {
-		document.body.removeChild(e.target._tooltip);
-		delete e.target._tooltip;
-	}
+        if (e.target._tooltip) {
+                document.body.removeChild(e.target._tooltip);
+                delete e.target._tooltip;
+        }
+}
+
+/**
+ * アコーディオンの設定
+ */
+function setupAccordions() {
+        const accordions = document.querySelectorAll(".accordion");
+        accordions.forEach((accordion) => {
+                const header = accordion.querySelector(".accordion__header");
+                const content = accordion.querySelector(".accordion__content");
+                if (!header || !content) return;
+
+                if (!accordion.classList.contains("accordion--open")) {
+                        content.style.display = "none";
+                }
+
+                header.addEventListener("click", () => {
+                        const isOpen = accordion.classList.toggle("accordion--open");
+                        content.style.display = isOpen ? "" : "none";
+                });
+        });
+}
+
+/**
+ * タブの設定
+ */
+function setupTabs() {
+        const tabContainers = document.querySelectorAll("[data-tabs]");
+        tabContainers.forEach((container) => {
+                const buttons = container.querySelectorAll("[data-tab-target]");
+                const panels = container.querySelectorAll("[data-tab-content]");
+
+                buttons.forEach((btn) => {
+                        btn.addEventListener("click", () => {
+                                const target = btn.getAttribute("data-tab-target");
+
+                                buttons.forEach((b) => b.classList.remove("active"));
+                                panels.forEach((panel) => {
+                                        if (
+                                                panel.getAttribute("data-tab-content") ===
+                                                target
+                                        ) {
+                                                panel.style.display = "";
+                                        } else {
+                                                panel.style.display = "none";
+                                        }
+                                });
+
+                                btn.classList.add("active");
+                        });
+                });
+        });
 }
 
 // ========================================
