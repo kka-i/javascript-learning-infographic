@@ -3,509 +3,284 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Page 8: 復習とチャレンジ | JavaScript超入門</title>
+		<title>ページ8：復習とチャレンジ | 第1週目 JavaScript超入門</title>
 		<link rel="stylesheet" href="../css/style.css" />
 	</head>
 	<body>
-		<nav class="navbar">
-			<div class="nav-container">
-				<div class="nav-brand">
-					<a href="../index.html">JavaScript超入門</a>
-				</div>
-				<div class="nav-menu">
-					<a href="../index.html" class="nav-link">ホーム</a>
-					<a href="index.html" class="nav-link">Week 1</a>
-					<a href="../week2/index.html" class="nav-link">Week 2</a>
-					<a href="../week3/index.html" class="nav-link">Week 3</a>
-				</div>
-			</div>
-		</nav>
-
-		<div class="container">
-			<div class="sidebar">
-				<div class="week-progress">
-					<h3>Week 1 進捗</h3>
-					<div class="progress-list">
-						<a href="page1.html" class="progress-item completed">
-							<span class="progress-number">1</span>
-							<span class="progress-title">JavaScriptとは</span>
-						</a>
-						<a href="page2.html" class="progress-item completed">
-							<span class="progress-number">2</span>
-							<span class="progress-title">console.log()</span>
-						</a>
-						<a href="page3.html" class="progress-item completed">
-							<span class="progress-number">3</span>
-							<span class="progress-title">四則演算</span>
-						</a>
-						<a href="page4.html" class="progress-item completed">
-							<span class="progress-number">4</span>
-							<span class="progress-title">変数</span>
-						</a>
-						<a href="page5.html" class="progress-item completed">
-							<span class="progress-number">5</span>
-							<span class="progress-title">文字列の連結</span>
-						</a>
-						<a href="page6.html" class="progress-item completed">
-							<span class="progress-number">6</span>
-							<span class="progress-title">条件分岐</span>
-						</a>
-						<a href="page7.html" class="progress-item completed">
-							<span class="progress-number">7</span>
-							<span class="progress-title">繰り返し処理</span>
-						</a>
-						<a href="page8.html" class="progress-item current">
-							<span class="progress-number">8</span>
-							<span class="progress-title">復習とチャレンジ</span>
-						</a>
+		<div class="page">
+			<!-- ヘッダー -->
+			<header class="header">
+				<div class="header__container">
+					<div class="header__nav">
+						<a href="../index.html" class="header__home">🏠 ホーム</a>
+						<div class="header__breadcrumb">
+							<a href="index.html" class="breadcrumb__item">第1週目</a>
+							<span class="breadcrumb__separator">></span>
+							<span class="breadcrumb__item breadcrumb__item--current"
+								>ページ8</span
+							>
+						</div>
 					</div>
+					<h1 class="header__title">
+						<span class="header__icon">📘</span>
+						ページ8：復習とチャレンジ
+					</h1>
+					<p class="header__subtitle">第1週目の総まとめと実践問題</p>
+				</div>
+			</header>
+
+			<!-- 進捗バー -->
+			<div class="progress-bar">
+				<div class="progress-bar__container">
+					<div class="progress-bar__track">
+						<div
+							class="progress-bar__fill progress-bar__fill--week1"
+							style="width: 100%"
+						></div>
+					</div>
+					<span class="progress-bar__text">進捗: 100% (8/8ページ)</span>
 				</div>
 			</div>
 
-			<main class="main-content">
-				<div class="breadcrumb">
-					<a href="../index.html">ホーム</a> > <a href="index.html">Week 1</a> >
-					<span>Page 8: 復習とチャレンジ</span>
-				</div>
+			<!-- メインコンテンツ -->
+			<main class="main">
+				<!-- 学習内容 -->
+				<section class="content">
+					<div class="content__container">
+						<!-- 詳細解説 -->
+						<div class="content-section">
+							<h2 class="content-section__title">🌟 第1週目の復習</h2>
+							<div class="content-section__body">
+								<p class="content-text">
+									第1週目では、JavaScriptの基本的な概念を学びました。ここで学んだ内容を振り返ってみましょう。
+								</p>
 
-				<div class="page-header">
-					<div class="page-number">Page 8</div>
-					<h1 class="page-title">復習とチャレンジ</h1>
-					<p class="page-subtitle">
-						第1週目で学んだことを振り返り、総合的な課題に挑戦します
-					</p>
-				</div>
-
-				<div class="content-section">
-					<h2>🎉 第1週目で学んだこと</h2>
-					<div class="summary-grid">
-						<div class="summary-card">
-							<div class="summary-icon">📝</div>
-							<h3>console.log()</h3>
-							<p>メッセージや計算結果をコンソールに表示する</p>
-							<div class="code-example">
-								<pre class="code-block"><code>console.log("こんにちは");</code></pre>
-							</div>
-						</div>
-
-						<div class="summary-card">
-							<div class="summary-icon">🧮</div>
-							<h3>四則演算</h3>
-							<p>+、-、*、/ を使った計算</p>
-							<div class="code-example">
-								<pre class="code-block"><code>console.log(10 + 5); // 15</code></pre>
-							</div>
-						</div>
-
-						<div class="summary-card">
-							<div class="summary-icon">📦</div>
-							<h3>変数（let）</h3>
-							<p>データを保存する箱</p>
-							<div class="code-example">
-								<pre class="code-block"><code>let name = "太郎";
-console.log(name);</code></pre>
-							</div>
-						</div>
-
-						<div class="summary-card">
-							<div class="summary-icon">🔗</div>
-							<h3>文字列の連結</h3>
-							<p>+ を使って文字列をつなげる</p>
-							<div class="code-example">
-								<pre class="code-block"><code>let message = "こんにちは、" + name + "さん";</code></pre>
-							</div>
-						</div>
-
-						<div class="summary-card">
-							<div class="summary-icon">🔀</div>
-							<h3>条件分岐（if文）</h3>
-							<p>条件によって処理を変える</p>
-							<div class="code-example">
-								<pre class="code-block"><code>if (age >= 18) {
-    console.log("成人です");
-}</code></pre>
-							</div>
-						</div>
-
-						<div class="summary-card">
-							<div class="summary-icon">🔄</div>
-							<h3>繰り返し（for文）</h3>
-							<p>同じ処理を何度も実行</p>
-							<div class="code-example">
-								<pre class="code-block"><code>for (let i = 1; i <= 5; i++) {
-    console.log(i);
-}</code></pre>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="content-section">
-					<h2>🔥 総合チャレンジ問題</h2>
-					<div class="challenge-card">
-						<h3>🎯 九九表作成プログラム</h3>
-						<p>以下の要件を満たす九九表作成プログラムを作ってください：</p>
-						<ul>
-							<li>変数 <code>table</code> に九九の段数を設定（例：3）</li>
-							<li>その段の1×1から1×9までを表示</li>
-							<li>「○の九九表」というタイトルも表示</li>
-							<li>区切り線「--------」も表示</li>
-						</ul>
-
-						<div class="interactive-console">
-							<div class="console-header">
-								<span class="console-title">🎯 九九表チャレンジ</span>
-								<button class="run-btn" onclick="runMultiplicationCode()">
-									実行
-								</button>
-								<button
-									class="clear-btn"
-									onclick="clearConsole('multiplicationConsole')"
-								>
-									クリア
-								</button>
-							</div>
-							<div class="console-input">
-								<textarea
-									id="multiplicationInput"
-									placeholder="九九表作成プログラムを書いてみましょう..."
-								>
-// 九九表を作成するプログラム
-let table = 7; // 何の段を作るか
-
-console.log(table + "の九九表");
-console.log("--------");
-
-for (let i = 1; i <= 9; i++) {
-    let result = table * i;
-    console.log(table + " × " + i + " = " + result);
-}</textarea
-								>
-							</div>
-							<div class="console-output" id="multiplicationConsole">
-								<div class="output-line">
-									コードを実行すると結果がここに表示されます
+								<div class="info-box info-box--primary">
+									<h3 class="info-box__title">📚 学習した内容</h3>
+									<ul class="info-box__list">
+										<li>JavaScriptとは何か、どこで動くか</li>
+										<li>console.logで文字を表示する方法</li>
+										<li>四則演算（+、-、*、/）の使い方</li>
+										<li>変数（let）でデータを保存する方法</li>
+										<li>文字列の連結とテンプレートリテラル</li>
+										<li>条件分岐（if文）で処理を分ける方法</li>
+										<li>繰り返し処理（for文）で効率的にコードを書く方法</li>
+									</ul>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
 
-				<div class="content-section">
-					<h2>🚀 応用チャレンジ問題</h2>
-					<div class="challenge-card">
-						<h3>🎯 成績判定システム</h3>
-						<p>以下の要件を満たす成績判定プログラムを作ってください：</p>
-						<ul>
-							<li>5人分のテストの点数を配列で管理</li>
-							<li>各人の点数と合格/不合格を表示（70点以上で合格）</li>
-							<li>全員の平均点を計算して表示</li>
-							<li>合格者数をカウントして表示</li>
-						</ul>
-
-						<div class="interactive-console">
-							<div class="console-header">
-								<span class="console-title">🎯 成績判定チャレンジ</span>
-								<button class="run-btn" onclick="runGradeCode()">実行</button>
-								<button
-									class="clear-btn"
-									onclick="clearConsole('gradeConsole')"
-								>
-									クリア
-								</button>
-							</div>
-							<div class="console-input">
-								<textarea
-									id="gradeInput"
-									placeholder="成績判定システムを作ってみましょう..."
-								>
-// 成績判定システム
-let scores = [85, 62, 78, 91, 55]; // 5人の点数
-let total = 0;
-let passCount = 0;
-
-console.log("=== 成績判定結果 ===");
-
-for (let i = 0; i < scores.length; i++) {
-    let score = scores[i];
-    let studentNumber = i + 1;
-    
-    // 合格判定
-    if (score >= 70) {
-        console.log("生徒" + studentNumber + ": " + score + "点 - 合格");
-        passCount++;
-    } else {
-        console.log("生徒" + studentNumber + ": " + score + "点 - 不合格");
-    }
-    
-    // 合計に加算
-    total = total + score;
-}
-
-// 平均点の計算
-let average = total / scores.length;
-
-console.log("--------");
-console.log("平均点: " + average + "点");
-console.log("合格者数: " + passCount + "人");</textarea
-								>
-							</div>
-							<div class="console-output" id="gradeConsole">
-								<div class="output-line">
-									コードを実行すると結果がここに表示されます
+						<!-- 総合課題 -->
+						<div class="content-section">
+							<h2 class="content-section__title">💡 総合課題</h2>
+							<div class="content-section__body">
+								<div class="challenge-box">
+									<p class="challenge-text">
+										これまで学んだ内容を組み合わせて、1から10までの数値について、偶数なら「偶数」、奇数なら「奇数」と表示するプログラムを作ってください。
+									</p>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
 
-				<div class="content-section">
-					<h2>🎨 クリエイティブチャレンジ</h2>
-					<div class="challenge-card">
-						<h3>🎯 パターン描画プログラム</h3>
-						<p>for文を使って面白いパターンを作ってみましょう：</p>
-
-						<div class="pattern-examples">
-							<div class="pattern-example">
-								<h4>星のピラミッド</h4>
+						<!-- 模範解答 -->
+						<div class="content-section">
+							<h2 class="content-section__title">✅ 模範解答</h2>
+							<div class="content-section__body">
 								<div class="code-example">
-									<pre class="code-block"><code>// 星のピラミッド
-for (let i = 1; i <= 5; i++) {
-    let stars = "";
-    for (let j = 1; j <= i; j++) {
-        stars = stars + "★";
-    }
-    console.log(stars);
-}</code></pre>
-								</div>
-							</div>
-
-							<div class="pattern-example">
-								<h4>数字のピラミッド</h4>
-								<div class="code-example">
-									<pre class="code-block"><code>// 数字のピラミッド
-for (let i = 1; i <= 5; i++) {
-    let numbers = "";
-    for (let j = 1; j <= i; j++) {
-        numbers = numbers + j;
-    }
-    console.log(numbers);
-}</code></pre>
-								</div>
-							</div>
-						</div>
-
-						<div class="interactive-console">
-							<div class="console-header">
-								<span class="console-title">🎯 パターン描画チャレンジ</span>
-								<button class="run-btn" onclick="runPatternCode()">実行</button>
-								<button
-									class="clear-btn"
-									onclick="clearConsole('patternConsole')"
-								>
-									クリア
-								</button>
-							</div>
-							<div class="console-input">
-								<textarea
-									id="patternInput"
-									placeholder="オリジナルのパターンを作ってみましょう..."
-								>
-// オリジナルパターンを作ってみよう！
-console.log("=== 星のピラミッド ===");
-for (let i = 1; i <= 5; i++) {
-    let stars = "";
-    for (let j = 1; j <= i; j++) {
-        stars = stars + "★";
-    }
-    console.log(stars);
-}
-
-console.log("\n=== 数字の階段 ===");
-for (let i = 1; i <= 5; i++) {
-    let numbers = "";
-    for (let j = 1; j <= i; j++) {
-        numbers = numbers + j + " ";
-    }
-    console.log(numbers);
-}</textarea
-								>
-							</div>
-							<div class="console-output" id="patternConsole">
-								<div class="output-line">
-									コードを実行すると結果がここに表示されます
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="content-section">
-					<h2>🏆 最終チャレンジ</h2>
-					<div class="challenge-card">
-						<h3>🎯 総合プログラム作成</h3>
-						<p>
-							これまで学んだすべての要素（変数、演算、条件分岐、繰り返し、文字列連結）を使って、
-							自由にプログラムを作ってみましょう！
-						</p>
-						<p><strong>例：</strong> ゲーム、計算機、占い、クイズなど</p>
-
-						<div class="interactive-console">
-							<div class="console-header">
-								<span class="console-title">🎯 自由制作エリア</span>
-								<button class="run-btn" onclick="runFinalCode()">実行</button>
-								<button
-									class="clear-btn"
-									onclick="clearConsole('finalConsole')"
-								>
-									クリア
-								</button>
-							</div>
-							<div class="console-input">
-								<textarea
-									id="finalInput"
-									placeholder="自由にプログラムを作ってみましょう..."
-								>
-// 簡単な数当てゲーム風プログラム
-let targetNumber = 7; // 正解の数字
-let playerGuess = 5;  // プレイヤーの予想
-
-console.log("=== 数当てゲーム ===");
-console.log("1から10までの数字を当ててください！");
-console.log("あなたの予想: " + playerGuess);
-
-if (playerGuess == targetNumber) {
-    console.log("🎉 正解です！おめでとうございます！");
-} else if (playerGuess < targetNumber) {
-    console.log("📈 もう少し大きい数字です");
-} else {
-    console.log("📉 もう少し小さい数字です");
-}
-
-console.log("正解は " + targetNumber + " でした！");
-
-// ボーナス：1から10までの数字で遊ぶ
-console.log("\n=== おまけ：数字の性質チェック ===");
-for (let i = 1; i <= 10; i++) {
-    let message = i + ": ";
-    
+									<div class="code-example__header">
+										<span class="code-example__title">JavaScript</span>
+										<button class="code-example__copy" onclick="copyCode(this)">
+											📋 コピー
+										</button>
+									</div>
+									<pre
+										class="code-example__code"
+									><code>for (let i = 1; i <= 10; i++) {
     if (i % 2 == 0) {
-        message = message + "偶数 ";
+        console.log(i + "は偶数です");
     } else {
-        message = message + "奇数 ";
+        console.log(i + "は奇数です");
     }
-    
-    if (i % 3 == 0) {
-        message = message + "3の倍数 ";
+}
+
+// より高度な例：九九の表
+for (let i = 1; i <= 9; i++) {
+    let result = "";
+    for (let j = 1; j <= 9; j++) {
+        result += i + "×" + j + "=" + (i * j) + " ";
     }
-    
-    if (i >= 7) {
-        message = message + "ラッキーナンバー！";
-    }
-    
-    console.log(message);
-}</textarea
-								>
-							</div>
-							<div class="console-output" id="finalConsole">
-								<div class="output-line">
-									コードを実行すると結果がここに表示されます
+    console.log(result);
+}</code></pre>
+								</div>
+
+								<div class="explanation-box">
+									<h3 class="explanation-box__title">📝 解説</h3>
+									<p class="explanation-text">
+										この問題では、for文（繰り返し）、if文（条件分岐）、変数、文字列連結を組み合わせています。
+										<code>%</code>は余りを求める演算子で、偶数判定に使います。
+									</p>
+								</div>
+
+								<div class="interactive-console">
+									<h3 class="interactive-console__title">🖥️ 総合チャレンジ</h3>
+									<div class="console-simulator">
+										<div class="console-simulator__header">
+											<span class="console-simulator__title"
+												>Final Challenge</span
+											>
+											<button class="console-clear" onclick="clearConsole()">
+												🗑️ クリア
+											</button>
+										</div>
+										<div class="console-simulator__body">
+											<div class="console-output" id="consoleOutput">
+												<div class="console-line">
+													<span class="console-prompt">&gt;</span>
+													<span class="console-text"
+														>学んだ内容を組み合わせてプログラムを作ってみましょう</span
+													>
+												</div>
+											</div>
+											<div class="console-input-area">
+												<span class="console-prompt">&gt;</span>
+												<input
+													type="text"
+													class="console-input"
+													id="consoleInput"
+													placeholder="for文とif文を組み合わせてみましょう"
+												/>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
 
-				<div class="content-section">
-					<h2>🎓 第1週目完了！</h2>
-					<div class="completion-card">
-						<div class="completion-icon">🎉</div>
-						<div class="completion-content">
-							<h3>おめでとうございます！</h3>
-							<p>
-								第1週目のJavaScript学習が完了しました。あなたは以下のスキルを身につけました：
-							</p>
-							<ul>
-								<li>✅ JavaScriptの基本的な書き方</li>
-								<li>✅ 変数を使ったデータの管理</li>
-								<li>✅ 条件分岐による処理の制御</li>
-								<li>✅ 繰り返し処理による効率的なプログラミング</li>
-								<li>✅ 文字列操作とメッセージの作成</li>
-							</ul>
-							<p>
-								次の第2週目では、より詳しいJavaScriptの機能や実践的なプログラミングテクニックを学んでいきます。
-							</p>
+						<!-- 次のステップ -->
+						<div class="content-section">
+							<h2 class="content-section__title">🚀 次のステップ</h2>
+							<div class="content-section__body">
+								<div class="info-box info-box--secondary">
+									<h3 class="info-box__title">🎯 第2週目に向けて</h3>
+									<p class="info-box__text">
+										第1週目お疲れ様でした！次の第2週目では、配列、オブジェクト、関数など、より高度なJavaScriptの機能を学んでいきます。
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- 重要ポイント -->
+						<div class="content-section">
+							<h2 class="content-section__title">⭐ 重要ポイント</h2>
+							<div class="content-section__body">
+								<div class="key-points">
+									<div class="key-point">
+										<div class="key-point__icon">🎯</div>
+										<div class="key-point__content">
+											<h4>基礎をしっかり理解</h4>
+											<p>
+												変数、条件分岐、繰り返しはプログラミングの基本です。
+											</p>
+										</div>
+									</div>
+									<div class="key-point">
+										<div class="key-point__icon">🔧</div>
+										<div class="key-point__content">
+											<h4>組み合わせて活用</h4>
+											<p>
+												学んだ要素を組み合わせることで複雑な処理ができます。
+											</p>
+										</div>
+									</div>
+									<div class="key-point">
+										<div class="key-point__icon">💪</div>
+										<div class="key-point__content">
+											<h4>実践で身につける</h4>
+											<p>
+												たくさんコードを書いて、実際に動かしてみることが大切です。
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- ナビゲーション -->
+						<div class="navigation-section">
+							<div class="navigation-buttons">
+								<a href="page7.html" class="nav-button nav-button--prev">
+									<span class="nav-button__arrow">←</span>
+									<span class="nav-button__text">
+										<span class="nav-button__label">前のページ</span>
+										<span class="nav-button__title">繰り返し処理</span>
+									</span>
+								</a>
+								<a
+									href="../week2/index.html"
+									class="nav-button nav-button--next"
+								>
+									<span class="nav-button__text">
+										<span class="nav-button__label">次の週</span>
+										<span class="nav-button__title">第2週目へ</span>
+									</span>
+									<span class="nav-button__arrow">→</span>
+								</a>
+							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="navigation-section">
-					<div class="nav-buttons">
-						<a href="page7.html" class="nav-btn prev-btn">
-							<span class="nav-arrow">←</span>
-							<span class="nav-text">
-								<span class="nav-label">前のページ</span>
-								<span class="nav-title">繰り返し処理</span>
-							</span>
-						</a>
-						<a href="../week2/index.html" class="nav-btn next-btn">
-							<span class="nav-text">
-								<span class="nav-label">次の週へ</span>
-								<span class="nav-title">Week 2</span>
-							</span>
-							<span class="nav-arrow">→</span>
-						</a>
-					</div>
-				</div>
+				</section>
 			</main>
+			<!-- サイドバー -->
+			<aside class="sidebar">
+				<div class="sidebar__container">
+					<h3 class="sidebar__title">📋 第1週目 目次</h3>
+					<nav class="sidebar__nav">
+						<a href="page1.html" class="sidebar__link">
+							<span class="sidebar__number">1</span>
+							JavaScriptってなに？
+						</a>
+						<a href="page2.html" class="sidebar__link">
+							<span class="sidebar__number">2</span>
+							「こんにちは」を表示しよう
+						</a>
+						<a href="page3.html" class="sidebar__link">
+							<span class="sidebar__number">3</span>
+							計算してみよう
+						</a>
+						<a href="page4.html" class="sidebar__link">
+							<span class="sidebar__number">4</span>
+							変数に入れてみよう
+						</a>
+						<a href="page5.html" class="sidebar__link sidebar__link--current">
+							<span class="sidebar__number">5</span>
+							文字列をつなげよう
+						</a>
+						<a href="page6.html" class="sidebar__link">
+							<span class="sidebar__number">6</span>
+							条件で分けよう
+						</a>
+						<a href="page7.html" class="sidebar__link">
+							<span class="sidebar__number">7</span>
+							くり返してみよう
+						</a>
+						<a href="page8.html" class="sidebar__link">
+							<span class="sidebar__number">8</span>
+							ふりかえり＆チャレンジ課題
+						</a>
+					</nav>
+				</div>
+			</aside>
 		</div>
 
 		<script src="../js/script.js"></script>
 		<script>
-			// ページ固有のJavaScript
-			function runMultiplicationCode() {
-				const code = document.getElementById("multiplicationInput").value;
-				const console = document.getElementById("multiplicationConsole");
-				runCodeInConsole(code, console);
-			}
-
-			function runGradeCode() {
-				const code = document.getElementById("gradeInput").value;
-				const console = document.getElementById("gradeConsole");
-				runCodeInConsole(code, console);
-			}
-
-			function runPatternCode() {
-				const code = document.getElementById("patternInput").value;
-				const console = document.getElementById("patternConsole");
-				runCodeInConsole(code, console);
-			}
-
-			function runFinalCode() {
-				const code = document.getElementById("finalInput").value;
-				const console = document.getElementById("finalConsole");
-				runCodeInConsole(code, console);
-			}
-
 			// ページ読み込み時の処理
 			document.addEventListener("DOMContentLoaded", function () {
-				// script.jsの関数が利用可能になるまで待機
-				if (
-					typeof updateProgress === "function" &&
-					typeof highlightCurrentPage === "function"
-				) {
+				if (typeof updateProgress === "function") {
 					updateProgress("week1", 8);
+				}
+				if (typeof highlightCurrentPage === "function") {
 					highlightCurrentPage();
-				} else {
-					// 関数が利用可能になるまで少し待つ
-					setTimeout(function () {
-						if (typeof updateProgress === "function") {
-							updateProgress("week1", 8);
-						}
-						if (typeof highlightCurrentPage === "function") {
-							highlightCurrentPage();
-						}
-					}, 100);
 				}
 			});
 		</script>
